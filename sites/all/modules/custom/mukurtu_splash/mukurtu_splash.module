@@ -24,7 +24,7 @@ function mukurtu_splash_menu() {
   // Page to enable/disable collaboration tools.
   if (ma_splash_prerelease_functionality_enabled('ma_collaboration_tools')) {
     $items['manage-collaboration-tools'] = [
-      'title' => 'Manage Collaboration Tools',
+      'title' => t('Manage Collaboration Tools'),
       'page callback' => 'drupal_get_form',
       'page arguments' => ['ma_splash_manage_collaboration_tools'],
       'access arguments' => ['administer site configuration'],
@@ -489,7 +489,7 @@ function mukurtu_splash_block_site_start() {
 
   if (user_access('administer site configuration')) {
     $items[] = [
-      'title' => 'Change site name, slogan and email address.',
+      'title' => t('Change site name, slogan and email address.'),
       'href' => 'admin/config/system/site-information',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Shortcut to page where you can change some settings for this site. The site name, a slogan for your site, and the email address for the site administrator.'),
@@ -498,7 +498,7 @@ function mukurtu_splash_block_site_start() {
 
   if (user_access('administer themes')) {
     $items[] = [
-      'title' => 'Change Logo',
+      'title' => t('Change Logo'),
       'href' => 'admin/appearance/settings/mukurtu_starter',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Shortcut to theme settings where you can change your logo.'),
@@ -506,7 +506,7 @@ function mukurtu_splash_block_site_start() {
   }
 
   $items[] = [
-    'title' => 'View & Edit About page',
+    'title' => t('View & Edit About page'),
     'href' => 'about',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Mukurtu comes with a default about page that you can edit.'),
@@ -515,7 +515,7 @@ function mukurtu_splash_block_site_start() {
 
   if (user_access('administer menu')) {
     $items[] = [
-      'title' => 'Enable and disable extra menu items',
+      'title' => t('Enable and disable extra menu items'),
       'href' => 'admin/structure/menu/manage/menu-browse-menu',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Mukurtu comes with additional pages that you can enable.'),
@@ -524,14 +524,14 @@ function mukurtu_splash_block_site_start() {
 
   if (user_access('edit boxes') && ($theme == 'mukurtu_starter')) {
     $items_layout[] = [
-      'title' => 'Edit Custom Site Header',
+      'title' => t('Edit Custom Site Header'),
       'href' => 'admin/structure/block/manage/boxes/ma_site_header/configure',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Edit HTML markup of Custom Site Header'),
     ];
 
     $items_layout[] = [
-      'title' => 'Edit Custom Site Footer',
+      'title' => t('Edit Custom Site Footer'),
       'href' => 'admin/structure/block/manage/boxes/ma_site_footer/configure',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Edit HTML markup of Custom Site Footer'),
@@ -542,8 +542,8 @@ function mukurtu_splash_block_site_start() {
     // Theme settings page link.
     if (drupal_valid_path('admin/appearance/settings/' . $theme)) {
       $items_layout[] = [
-        'title' => 'Change Theme Settings',
-        'href' => 'admin/appearance/settings/' . $theme,
+	'title' => t('Change Theme Settings'),
+	'href' => 'admin/appearance/settings/' . $theme,
         'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
         'description' => t('Change settings for the currently active theme.'),
       ];
@@ -563,7 +563,7 @@ function mukurtu_splash_block_site_start() {
     ];
 
     $items_layout[] = [
-      'title' => 'Configure Default Browse Page',
+      'title' => t('Configure Default Browse Page'),
       'href' => 'admin/config/mukurtu/select-default-browse-page',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Select the default content browse page.'),
@@ -601,28 +601,28 @@ function mukurtu_splash_block_site_config() {
 
   if (user_access('administer site configuration')) {
     $items[] = [
-      'title' => 'Configure Google Analytics',
+      'title' => t('Configure Google Analytics'),
       'href' => 'admin/config/system/googleanalytics',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('You will need to create a Google Analytics account and then configure Google Analytics on this site.'),
     ];
 
     $items[] = [
-      'title' => 'Configure Google Maps API Key',
+      'title' => t('Configure Google Maps API Key'),
       'href' => 'admin/config/content/geofield_map',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('A Google Maps API key is required for some mapping features to function.'),
     ];
 
     $items[] = [
-      'title' => 'Configure Mollom',
+      'title' => t('Configure Mollom'),
       'href' => 'admin/config/content/mollom/settings',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Mollom is a content moderation web service used to filter out spam and malicious content.  Requires a Mollom account.'),
     ];
 
     $items[] = [
-      'title' => 'Rebuild Site Permissions',
+      'title' => t('Rebuild Site Permissions'),
       'href' => 'admin/reports/status/rebuild',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('If doing a lot of site content editing, you may need to rebuild permissions to make sure that access permissions remain set correctly.'),
@@ -630,7 +630,7 @@ function mukurtu_splash_block_site_config() {
 
     if (module_exists('mukurtu_content_warnings') && drupal_valid_path('admin/config/mukurtu/content-warnings')) {
       $items[] = [
-        'title' => 'Configure Media Warnings',
+	'title' => t('Configure Media Warnings'),
         'href' => 'admin/config/mukurtu/content-warnings',
         'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
         'description' => t('Configure click-through overlays for potentially sensitive media.'),
@@ -639,8 +639,8 @@ function mukurtu_splash_block_site_config() {
 
     if (module_exists('ma_mobile_client')) {
       $items[] = [
-        'title' => 'Configure Mukurtu Mobile',
-        'href' => 'mukurtu-mobile',
+        'title' => t('Configure Mukurtu Mobile'),
+	'href' => 'mukurtu-mobile',
         'localized_options' => [
           'attributes' => ['class' => ['opic-dashboard-content']],
           'query' => drupal_get_destination(),
@@ -651,8 +651,8 @@ function mukurtu_splash_block_site_config() {
 
     if (user_access('administer modules')) {
       $items[] = [
-        'title' => 'Enable/Disable Mukurtu Modules',
-        'href' => 'admin/modules',
+        'title' => t('Enable/Disable Mukurtu Modules'),
+	'href' => 'admin/modules',
         'localized_options' => [
           'attributes' => ['class' => ['opic-dashboard-content']],
           'fragment' => 'mukurtu',
@@ -663,7 +663,7 @@ function mukurtu_splash_block_site_config() {
 
     if (ma_splash_prerelease_functionality_enabled('ma_collaboration_tools') && user_access('administer site configuration')) {
       $items[] = [
-        'title' => 'Manage Collaboration Tools',
+	'title' => t('Manage Collaboration Tools'),
         'href' => 'manage-collaboration-tools',
         'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
         'description' => t('Enable, disable, and configure the Collaboration Tools'),
@@ -672,8 +672,8 @@ function mukurtu_splash_block_site_config() {
 
     if (module_exists('mukurtu_migration_prep')) {
       $items[] = [
-        'title' => 'View Migration Preparation Summary',
-        'href' => '/admin/reports/migration/summary',
+        'title' => t('View Migration Preparation Summary'),
+	'href' => '/admin/reports/migration/summary',
         'localized_options' => [
           'attributes' => ['class' => ['opic-dashboard-content', 'overlay-exclude']],
         ],
@@ -705,7 +705,7 @@ function mukurtu_splash_block_manage_content() {
 
   if (node_access('create', 'digital_heritage')) {
     $items[] = [
-      'title' => 'Add a Digital Heritage item',
+      'title' => t('Add a Digital Heritage item'),
       'href' => 'node/add/digital-heritage',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Add a Digital Heritage Item.'),
@@ -714,7 +714,7 @@ function mukurtu_splash_block_manage_content() {
 
   if (node_access('create', 'collection')) {
     $items[] = [
-      'title' => 'Create a Collection',
+      'title' => t('Create a Collection'),
       'href' => 'node/add/collection',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Create a collection of digital heritage.'),
@@ -723,7 +723,7 @@ function mukurtu_splash_block_manage_content() {
 
   if (user_access('access content overview')) {
     $items[] = [
-      'title' => 'Manage Content',
+      'title' => t('Manage Content'),
       'href' => 'admin/content',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('View all content on the site'),
@@ -733,7 +733,7 @@ function mukurtu_splash_block_manage_content() {
 
   if (user_has_role($admin->rid) || user_has_role($mukurtuadmin->rid)) {
     $items[] = [
-      'title' => 'View Media',
+      'title' => t('View Media'),
       'href' => 'admin/content/atoms',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('View all media assets.'),
@@ -742,7 +742,7 @@ function mukurtu_splash_block_manage_content() {
 
   if (scald_atom_add_access()) {
     $items[] = [
-      'title' => 'Add Media',
+      'title' => t('Add Media'),
       'href' => 'atom/add',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Add new media files.'),
@@ -751,7 +751,7 @@ function mukurtu_splash_block_manage_content() {
 
   if (user_access('access administration pages')) {
     $items[] = [
-      'title' => 'List of Indexed Fields',
+      'title' => t('List of Indexed Fields'),
       'href' => 'indexed-fields',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('List of fields that will return results if their contents match user searches.'),
@@ -760,7 +760,7 @@ function mukurtu_splash_block_manage_content() {
 
   if (user_access('create fixity_check content')) {
     $items[] = [
-      'title' => 'File Fixity Checks',
+      'title' => t('File Fixity Checks'),
       'href' => 'fixity-checks',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('View, manage, create, and run file fixity checks, to assure of Media Asset integrity.'),
@@ -789,7 +789,7 @@ function mukurtu_splash_block_manage_dictionary() {
   $vocabulary = taxonomy_vocabulary_machine_name_load('language');
   if (user_access('edit terms in ' . $vocabulary->vid)) {
     $items[] = [
-      'title' => 'Manage Languages',
+      'title' => t('Manage Languages'),
       'href' => 'admin/structure/taxonomy/language',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Manage the terms in the Language taxonomy. A language must exist in this taxonomy before a dictionary or language community can be added.'),
@@ -798,7 +798,7 @@ function mukurtu_splash_block_manage_dictionary() {
 
   if (module_exists('ma_dictionary') && user_access('administer taxonomy')) {
     $items[] = [
-      'title' => 'Set Default Language',
+      'title' => t('Set Default Language'),
       'href' => 'dashboard/set-default-language',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Set the default language used when creating dictionary words.'),
@@ -807,7 +807,7 @@ function mukurtu_splash_block_manage_dictionary() {
 
   if (module_exists('ma_dictionary') && (user_has_role($mukurtu_admin->rid) || user_has_role($drupal_admin->rid))) {
     $items[] = [
-      'title' => 'Customize Dictionary Alphabetical Order',
+      'title' => t('Customize Dictionary Alphabetical Order'),
       'href' => ma_dictionary_get_aod_add_edit_path(),
       'localized_options' => [
         'attributes' => ['class' => ['opic-dashboard-content']],
@@ -819,7 +819,7 @@ function mukurtu_splash_block_manage_dictionary() {
 
   if (module_exists('ma_dictionary') && (user_has_role($mukurtu_admin->rid) || user_has_role($drupal_admin->rid))) {
     $items[] = [
-      'title' => 'Manage Language Communities',
+      'title' => t('Manage Language Communities'),
       'href' => 'dashboard/manage-dictionaries',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Manage the language communities that control access to the dictionaries.'),
@@ -829,7 +829,7 @@ function mukurtu_splash_block_manage_dictionary() {
   $vocabulary = taxonomy_vocabulary_machine_name_load('part_of_speech');
   if (user_access('edit terms in ' . $vocabulary->vid)) {
     $items[] = [
-      'title' => 'Manage Part of Speech',
+      'title' => t('Manage Part of Speech'),
       'href' => 'admin/structure/taxonomy/part_of_speech',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Manage the terms in the Part of Speech taxonomy.'),
@@ -838,7 +838,7 @@ function mukurtu_splash_block_manage_dictionary() {
 
   if (module_exists('ma_dictionary') && user_access('create word_list content')) {
     $items[] = [
-      'title' => 'Create a Word List',
+      'title' => t('Create a Word List'),
       'href' => 'node/add/word-list',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Create a list of dictionary words.'),
@@ -865,7 +865,7 @@ function mukurtu_splash_block_batch_import() {
 
   if (feeds_access('import', 'mukurtu_import_node_digital_heritage')) {
     $items[] = [
-      'title' => 'Import Digital Heritage Items',
+      'title' => t('Import Digital Heritage Items'),
       'href' => 'import/mukurtu_import_node_digital_heritage',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Batch import many digital heritage items from CSV file. If the media assets have associated metadata, import the media files first using the media importers.'),
@@ -874,7 +874,7 @@ function mukurtu_splash_block_batch_import() {
 
   if (feeds_access('import', 'digital_heritage_dc') && ma_splash_prerelease_functionality_enabled('ma_importexport_dc')) {
     $items[] = [
-      'title' => 'Import Digital Heritage Dublin Core and MODS XML Metadata',
+      'title' => t('Import Digital Heritage Dublin Core and MODS XML Metadata'),
       'href' => 'import/digital-heritage-xml-file',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Batch import many digital heritage items from a Dublin Core or MODS XML file.'),
@@ -888,14 +888,14 @@ function mukurtu_splash_block_batch_import() {
   if (user_has_role($mukurtu_admin->rid) || user_has_role($drupal_admin->rid)) {
     if (module_exists('ma_dictionary')) {
       $items[] = [
-        'title' => 'Import Dictionary Words',
+        'title' => t('Import Dictionary Words'),
         'href' => 'import/mukurtu_import_node_dictionary_word',
         'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
         'description' => t('Batch import many dictionary words.'),
       ];
 
       $items[] = [
-        'title' => 'Import Dictionary Word Entries',
+        'title' => t('Import Dictionary Word Entries'),
         'href' => 'import/mukurtu_import_paragraphs_item_dictionary_word_bundle',
         'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
         'description' => t('Batch import additional dictionary word entries.'),
@@ -903,28 +903,28 @@ function mukurtu_splash_block_batch_import() {
     }
 
     $items[] = [
-      'title' => 'All Importers',
+      'title' => t('All Importers'),
       'href' => 'import',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('View a list of all available importers.'),
     ];
 
     $items[] = [
-      'title' => 'Export Digital Heritage Items',
+      'title' => t('Export Digital Heritage Items'),
       'href' => 'manage/digital-heritage',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Select digital heritage items for exporting to a CSV or XML file.'),
     ];
 
     $items[] = [
-      'title' => 'Export Media (Scald Atoms)',
+      'title' => t('Export Media (Scald Atoms)'),
       'href' => 'manage/scald-atoms',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Select media for exporting to a CSV file.'),
     ];
 
     $items[] = [
-      'title' => 'Export Dictionary Words',
+      'title' => t('Export Dictionary Words'),
       'href' => 'manage/dictionary-words',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Select dictionary words for exporting to a CSV file.'),
@@ -932,7 +932,7 @@ function mukurtu_splash_block_batch_import() {
 
     if (feeds_access('import', 'digital_heritage_metadata')) {
       $items[] = [
-        'title' => 'Import from Zip Archive',
+        'title' => t('Import from Zip Archive'),
         'href' => 'manage/zip_import',
         'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
         'description' => t('Batch import content from a Zip Archive.'),
@@ -970,14 +970,14 @@ function mukurtu_splash_block_manage_taxonomy() {
   $vocabulary = taxonomy_vocabulary_machine_name_load('category');
   if (user_access('edit terms in ' . $vocabulary->vid)) {
     $items[] = [
-      'title' => 'Add One Category',
+      'title' => t('Add One Category'),
       'href' => 'admin/structure/taxonomy/category/add',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Add a category'),
     ];
 
     $items[] = [
-      'title' => 'Manage Categories',
+      'title' => t('Manage Categories'),
       'href' => 'admin/structure/taxonomy/category',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Manage all categories'),
@@ -986,7 +986,7 @@ function mukurtu_splash_block_manage_taxonomy() {
 
   if (feeds_access('import', 'import_categories')) {
     $items[] = [
-      'title' => 'Import Many Categories',
+      'title' => t('Import Many Categories'),
       'href' => 'import/import_categories',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Batch import many categories from CSV file. Import Media first.'),
@@ -996,14 +996,14 @@ function mukurtu_splash_block_manage_taxonomy() {
   $vocabulary = taxonomy_vocabulary_machine_name_load('tags');
   if (user_access('edit terms in ' . $vocabulary->vid)) {
     $items[] = [
-      'title' => 'Add One Keyword',
+      'title' => t('Add One Keyword'),
       'href' => 'admin/structure/taxonomy/tags/add',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Add a Keyword'),
     ];
 
     $items[] = [
-      'title' => 'Manage Keywords',
+      'title' => t('Manage Keywords'),
       'href' => 'admin/structure/taxonomy/tags',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Manage all keywords'),
@@ -1029,49 +1029,49 @@ function mukurtu_splash_block_demo_config() {
   $markup = '';
 
   $items[] = [
-    'title' => 'Download Sample Content',
+    'title' => t('Download Sample Content'),
     'href' => 'https://github.com/codamatic/mukurtu-demo-content/zipball/master',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('100MB of Demo Content. Download from Github: https://github.com/codamatic/mukurtu-demo-content'),
   ];
 
   $items[] = [
-    'title' => '1. Add Media',
+    'title' => t('1. Add Media'),
     'href' => 'file/add',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Batch add media files.'),
   ];
 
   $items[] = [
-    'title' => '2. Import Many Cultural Protocols',
+    'title' => t('2. Import Many Cultural Protocols'),
     'href' => 'import/import_cultural_protocols',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Batch import many cultural protocols from CSV file.  Import Media first.'),
   ];
 
   $items[] = [
-    'title' => '3. Import Many Communities',
+    'title' => t('3. Import Many Communities'),
     'href' => 'import/import_communities',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Batch import many communities from CSV file. Import Media first.'),
   ];
 
   $items[] = [
-    'title' => '4. Add Many Users',
+    'title' => t('4. Add Many Users'),
     'href' => 'import/import_users',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Batch import many users from CSV file'),
   ];
 
   $items[] = [
-    'title' => '5. Import Many Categories',
+    'title' => t('5. Import Many Categories'),
     'href' => 'import/import_categories',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Batch import many categories from CSV file. Import Media first.'),
   ];
 
   $items[] = [
-    'title' => '6. Import Digital Heritage Metadata',
+    'title' => t('6. Import Digital Heritage Metadata'),
     'href' => 'import/digital_heritage_metadata',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Batch import many digital heritage items from CSV file. Import Media first.'),
@@ -1099,7 +1099,7 @@ function mukurtu_splash_block_manage_community() {
 
 
   $items[] = [
-    'title' => 'Manage Communities and Protocols',
+    'title' => t('Manage Communities and Protocols'),
     'href' => 'dashboard/communities',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Add/edit Communities'),
@@ -1107,7 +1107,7 @@ function mukurtu_splash_block_manage_community() {
 
   if (node_access('create', 'community')) {
     $items[] = [
-      'title' => 'Create Community',
+      'title' => t('Create Community'),
       'href' => 'node/add/community',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Add Communities'),
@@ -1116,7 +1116,7 @@ function mukurtu_splash_block_manage_community() {
 
   if (node_access('create', 'cultural_protocol_group')) {
     $items[] = [
-      'title' => 'Create Cultural Protocol',
+      'title' => t('Create Cultural Protocol'),
       'href' => 'node/add/cultural-protocol-group',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Add Protocols'),
@@ -1124,19 +1124,19 @@ function mukurtu_splash_block_manage_community() {
   }
 
   if (user_access('administer site configuration')) {
-    $dh_tk_description = 'Switch digital heritage traditional knowledge label text customization from community-level to site-wide.';
+    $dh_tk_description = t('Switch digital heritage traditional knowledge label text customization from community-level to site-wide.');
     if (variable_get('mukurtu_use_sitewide_custom_tk_label_text')) {
-      $dh_tk_description = 'Switch digital heritage traditional knowledge label text customization from site-wide to community-level.';
+      $dh_tk_description = t('Switch digital heritage traditional knowledge label text customization from site-wide to community-level.');
     }
     $items[] = [
-      'title' => 'Toggle TK Label Text Customization Level',
+      'title' => t('Toggle TK Label Text Customization Level'),
       'href' => 'dashboard/toggle-custom-tk-label-text',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t($dh_tk_description),
     ];
     if (variable_get('mukurtu_use_sitewide_custom_tk_label_text')) {
       $items[] = [
-        'title' => 'Customize Site-Wide TK Label Text',
+        'title' => t('Customize Site-Wide TK Label Text'),
         'href' => 'dashboard/customize-tk-label-text',
         'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
         'description' => t('Customize site-wide digital heritage traditional knowledge label text.'),
@@ -1254,21 +1254,21 @@ function mukurtu_splash_block_support() {
   ];
 
   $items[] = [
-    'title' => 'Mukurtu Support',
+    'title' => t('Mukurtu Support'),
     'href' => 'http://support.mukurtu.org',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Questions and answers to common issues'),
   ];
 
   $items[] = [
-    'title' => 'Mukurtu Video Channel',
+    'title' => t('Mukurtu Video Channel'),
     'href' => 'https://vimeo.com/channels/mukurtucms',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('How Tos and Walkthroughs'),
   ];
 
   $items[] = [
-    'title' => 'Contact Mukurtu',
+    'title' => t('Contact Mukurtu'),
     'href' => 'http://www.mukurtu.org/',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
   ];
@@ -1295,7 +1295,7 @@ function mukurtu_splash_block_user() {
   global $user;
 
   $items[] = [
-    'title' => 'Edit my account',
+    'title' => t('Edit my account'),
     'href' => 'user/' . $user->uid . '/edit',
     'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
     'description' => t('Manage your time zone, profile picture and contact settings.'),
@@ -1303,7 +1303,7 @@ function mukurtu_splash_block_user() {
 
   if (user_access('administer users')) {
     $items[] = [
-      'title' => 'Add user',
+      'title' => t('Add user'),
       'href' => 'admin/people/create',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Add a user to your Mukurtu site.'),
@@ -1312,7 +1312,7 @@ function mukurtu_splash_block_user() {
 
   if (user_access('administer users')) {
     $items[] = [
-      'title' => 'Manage users',
+      'title' => t('Manage users'),
       'href' => 'admin/people',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Manage existing users and allow new users to access your site.'),
@@ -1321,7 +1321,7 @@ function mukurtu_splash_block_user() {
 
   if (user_access('administer users')) {
     $items[] = [
-      'title' => 'Manage user registration',
+      'title' => t('Manage user registration'),
       'href' => 'admin/config/people/accounts',
       'localized_options' => ['attributes' => ['class' => ['opic-dashboard-content']]],
       'description' => t('Manage how users can register for your site, email notifications, and more.'),
