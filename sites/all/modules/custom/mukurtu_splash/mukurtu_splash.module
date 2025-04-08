@@ -1540,7 +1540,7 @@ function mukurtu_splash_block_wizard() {
       'query' => ['destination' => $_GET['q']],
       'attributes' => ['class' => ['btn', 'btn-default']],
     ];
-    return l('Getting Started Guide', 'wizard/toggle', $attribs);
+    return l(t('Getting Started Guide'), 'wizard/toggle', $attribs);
   }
 
   // need to determine which step of the wizard is active
