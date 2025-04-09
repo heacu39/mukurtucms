@@ -2,7 +2,7 @@
 // output the top wizard of the dashboard
 
 $attribs = array('query'=>array('destination'=>$_GET['q']), 'attributes' => array('class' => array('btn','btn-default')));
-$toggle_link = l('Hide Guide', 'wizard/toggle', $attribs);
+$toggle_link = l(t('Hide Guide'), 'wizard/toggle', $attribs);
 
 ?>
 
