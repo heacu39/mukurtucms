@@ -187,6 +187,7 @@ function mukurtu_default_menu_links () {
     'link_path' => 'collections',
     'link_title' => 'Browse Collections',
     'menu_name' => 'menu-browse-menu',
+    'language' => 'en',
     'weight' => -50,
     'expanded' => 0,
   );
@@ -196,6 +197,7 @@ function mukurtu_default_menu_links () {
     'link_path' => 'digital-heritage',
     'link_title' => 'Browse Digital Heritage',
     'menu_name' => 'menu-browse-menu',
+    'language' => 'en',
     'weight' => -45,
     'expanded' => 0,
   );
@@ -205,6 +207,7 @@ function mukurtu_default_menu_links () {
     'link_path' => 'browse',
     'link_title' => 'Browse',
     'menu_name' => 'menu-browse-menu',
+    'language' => 'en',
     'weight' => -43,
     'expanded' => 0,
     'customized' => 1,
@@ -215,6 +218,7 @@ function mukurtu_default_menu_links () {
     'link_path' => 'dictionary',
     'link_title' => 'Browse Dictionary',
     'menu_name' => 'menu-browse-menu',
+    'language' => 'en',
     'weight' => -40,
     'expanded' => 0,
     'customized' => 1,
@@ -286,6 +290,7 @@ function mukurtu_create_default_pages () {
   $node->menu = array(
     'link_title' => 'About',
     'menu_name' => 'menu-browse-menu',
+    'language' => 'en',
     'weight' => -55,
     'plid' => 0,
     'enabled' => 1,

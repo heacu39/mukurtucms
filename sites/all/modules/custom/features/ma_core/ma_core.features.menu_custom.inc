@@ -26,7 +26,7 @@ function ma_core_menu_default_menu_custom() {
     'description' => 'The Browse Menu is for viewing content.
 ',
     'language' => 'und',
-    'i18n_mode' => 0,
+    'i18n_mode' => 5,
   );
   // Translatables
   // Included for use with string extractors like potx.
