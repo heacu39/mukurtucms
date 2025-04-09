@@ -19,20 +19,9 @@ function ma_profile_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'mm_sync_content_view_field' => array(
-      'weight' => '2',
+      'format' => 'default',
       'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'personal_collections' => array(
-      'weight' => '1',
-      'label' => 'above',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'My Personal Collections',
-          'lb-col' => TRUE,
-        ),
-      ),
+      'weight' => '2',
     ),
     'og_user_node' => array(
       'formatter_settings' => array(
@@ -41,6 +30,17 @@ function ma_profile_ds_field_settings_info() {
           'lb-col' => TRUE,
         ),
       ),
+    ),
+    'personal_collections' => array(
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'My Personal Collections',
+          'lb-col' => TRUE,
+        ),
+      ),
+      'label' => 'above',
+      'weight' => '1',
     ),
   );
   $export['user|user|default'] = $ds_fieldsetting;
@@ -86,6 +86,22 @@ function ma_profile_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'bootstrap_12';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'mm_sync_content_view_field' => 'central',
+      'og_user_node' => 'central',
+      'personal_collections' => 'central',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'central' => array(
         0 => 'og_user_node',
@@ -93,25 +109,9 @@ function ma_profile_ds_layout_settings_info() {
         2 => 'mm_sync_content_view_field',
       ),
     ),
-    'fields' => array(
-      'og_user_node' => 'central',
-      'personal_collections' => 'central',
-      'mm_sync_content_view_field' => 'central',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'central' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['user|user|default'] = $ds_layout;
 
@@ -123,6 +123,31 @@ function ma_profile_ds_layout_settings_info() {
   $ds_layout->view_mode = 'form';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      '_add_existing_field' => 'hidden',
+      'account' => 'ds_content',
+      'ckeditor' => 'hidden',
+      'contact' => 'ds_content',
+      'field_dhan_frequency' => 'hidden',
+      'field_notifications_freq_def' => 'hidden',
+      'googleanalytics' => 'ds_content',
+      'locale' => 'ds_content',
+      'og_user_node' => 'ds_content',
+      'picture' => 'ds_content',
+      'redirect' => 'ds_content',
+      'timezone' => 'ds_content',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'ds_content' => array(
         0 => 'account',
@@ -141,34 +166,9 @@ function ma_profile_ds_layout_settings_info() {
         11 => '_add_existing_field',
       ),
     ),
-    'fields' => array(
-      'account' => 'ds_content',
-      'googleanalytics' => 'ds_content',
-      'contact' => 'ds_content',
-      'locale' => 'ds_content',
-      'picture' => 'ds_content',
-      'timezone' => 'ds_content',
-      'og_user_node' => 'ds_content',
-      'redirect' => 'ds_content',
-      'field_notifications_freq_def' => 'hidden',
-      'field_dhan_frequency' => 'hidden',
-      'ckeditor' => 'hidden',
-      '_add_existing_field' => 'hidden',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['user|user|form'] = $ds_layout;
 

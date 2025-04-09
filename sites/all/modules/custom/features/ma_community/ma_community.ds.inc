@@ -19,14 +19,14 @@ function ma_community_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'browse_teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
-      'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
+        'class' => '',
         'link' => '1',
         'wrapper' => 'h2',
-        'class' => '',
       ),
+      'label' => 'hidden',
+      'weight' => '1',
     ),
   );
   $export['node|community|browse_teaser'] = $ds_fieldsetting;
@@ -39,19 +39,19 @@ function ma_community_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'admin_actions' => array(
+      'format' => 'default',
+      'label' => 'hidden',
       'weight' => '4',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'links' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
     ),
     'comments' => array(
-      'weight' => '2',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '2',
+    ),
+    'links' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '3',
     ),
   );
   $export['node|community|default'] = $ds_fieldsetting;
@@ -64,25 +64,25 @@ function ma_community_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'featured_content';
   $ds_fieldsetting->settings = array(
     'featured_content_type' => array(
-      'weight' => '2',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '2',
     ),
     'featured_content_view_link' => array(
-      'weight' => '0',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
     'title' => array(
-      'weight' => '3',
-      'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h2',
         'class' => '',
         'ft' => array(),
+        'link' => '1',
+        'wrapper' => 'h2',
       ),
+      'label' => 'hidden',
+      'weight' => '3',
     ),
   );
   $export['node|community|featured_content'] = $ds_fieldsetting;
@@ -94,50 +94,40 @@ function ma_community_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'community';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'create_content_block_ds_field' => array(
-      'weight' => '10',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'mukurtu_mobile_sync' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'community_membership_status' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'featured_collections' => array(
-      'weight' => '10',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'community_browse_all_dh_link' => array(
-      'weight' => '8',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '8',
     ),
     'community_dh_items' => array(
-      'weight' => '3',
-      'label' => 'above',
       'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(
           'lb-col' => TRUE,
         ),
       ),
+      'label' => 'above',
+      'weight' => '3',
+    ),
+    'community_membership_status' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
     'community_protocol_items' => array(
+      'format' => 'default',
+      'label' => 'hidden',
       'weight' => '5',
-      'label' => 'hidden',
-      'format' => 'default',
     ),
-    'group_members' => array(
-      'weight' => '4',
-      'label' => 'hidden',
+    'create_content_block_ds_field' => array(
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '10',
+    ),
+    'featured_collections' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '10',
     ),
     'field_child_communities' => array(
       'formatter_settings' => array(
@@ -153,6 +143,16 @@ function ma_community_ds_field_settings_info() {
         ),
       ),
     ),
+    'group_members' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '4',
+    ),
+    'mukurtu_mobile_sync' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '1',
+    ),
   );
   $export['node|community|full'] = $ds_fieldsetting;
 
@@ -164,9 +164,9 @@ function ma_community_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'mukurtu_mobile';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|community|mukurtu_mobile'] = $ds_fieldsetting;
@@ -178,33 +178,33 @@ function ma_community_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'community';
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
-    'mukurtu_mobile_sync' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'featured_content_type' => array(
-      'weight' => '3',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'title' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h2',
-        'class' => '',
-        'ft' => array(),
-      ),
-    ),
     'body' => array(
       'formatter_settings' => array(
         'ft' => array(
           'lb-col' => TRUE,
         ),
       ),
+    ),
+    'featured_content_type' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '3',
+    ),
+    'mukurtu_mobile_sync' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '2',
+    ),
+    'title' => array(
+      'format' => 'default',
+      'formatter_settings' => array(
+        'class' => '',
+        'ft' => array(),
+        'link' => '1',
+        'wrapper' => 'h2',
+      ),
+      'label' => 'hidden',
+      'weight' => '1',
     ),
   );
   $export['node|community|teaser'] = $ds_fieldsetting;
@@ -217,15 +217,15 @@ function ma_community_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'thumbed';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h3',
         'class' => '',
         'ft' => array(),
+        'link' => '1',
+        'wrapper' => 'h3',
       ),
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|community|thumbed'] = $ds_fieldsetting;
@@ -250,8 +250,8 @@ function ma_community_ds_custom_fields_info() {
   $ds_field->ui_limit = 'community|*';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<h2 class="block-title">Digital Heritage</h2><div class="view-content"><a href="<?php print url("/digital-heritage/community");?>/[node:nid]">Browse All Digital Heritage in [node:title]</a></div>',
       'format' => 'ds_code',
+      'value' => '<h2 class="block-title">Digital Heritage</h2><div class="view-content"><a href="<?php print url("/digital-heritage/community");?>/[node:nid]">Browse All Digital Heritage in [node:title]</a></div>',
     ),
     'use_token' => 1,
   );
@@ -283,11 +283,11 @@ function ma_community_ds_custom_fields_info() {
   $ds_field->ui_limit = 'community|*';
   $ds_field->properties = array(
     'code' => array(
+      'format' => 'ds_code',
       'value' => '<?php
 $subscribe_link = _render_subscribe_link($entity);
 print drupal_render($subscribe_link);
 ?>',
-      'format' => 'ds_code',
     ),
     'use_token' => 0,
   );
@@ -371,22 +371,22 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'browse_teaser';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'fields' => array(
+      'field_media' => 'ds_content',
+      'title' => 'ds_content',
+    ),
     'hide_empty_regions' => 0,
     'hide_sidebars' => 0,
+    'limit' => array(
+      'field_media' => '1',
+    ),
     'regions' => array(
       'ds_content' => array(
         0 => 'field_media',
         1 => 'title',
       ),
     ),
-    'fields' => array(
-      'field_media' => 'ds_content',
-      'title' => 'ds_content',
-    ),
-    'limit' => array(
-      'field_media' => '1',
-    ),
-    'classes' => array(),
   );
   $export['node|community|browse_teaser'] = $ds_layout;
 
@@ -398,6 +398,25 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'admin_actions' => 'right',
+      'body' => 'left',
+      'comments' => 'left',
+      'group_group' => 'right',
+      'group_register' => 'right',
+      'links' => 'right',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => 0,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'left' => array(
         0 => 'body',
@@ -410,31 +429,12 @@ function ma_community_ds_layout_settings_info() {
         5 => 'group_register',
       ),
     ),
-    'fields' => array(
-      'body' => 'left',
-      'comments' => 'left',
-      'links' => 'right',
-      'admin_actions' => 'right',
-      'group_group' => 'right',
-      'group_register' => 'right',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
+      'footer' => 'div',
       'header' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'footer' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['node|community|default'] = $ds_layout;
 
@@ -446,6 +446,24 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'featured_content';
   $ds_layout->layout = 'bootstrap_12';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'central',
+      'featured_content_type' => 'central',
+      'featured_content_view_link' => 'central',
+      'field_community_image_thumbnail' => 'central',
+      'title' => 'central',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'central' => array(
         0 => 'featured_content_view_link',
@@ -455,27 +473,9 @@ function ma_community_ds_layout_settings_info() {
         4 => 'body',
       ),
     ),
-    'fields' => array(
-      'featured_content_view_link' => 'central',
-      'field_community_image_thumbnail' => 'central',
-      'featured_content_type' => 'central',
-      'title' => 'central',
-      'body' => 'central',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'central' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|community|featured_content'] = $ds_layout;
 
@@ -487,6 +487,42 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'form';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      '_add_existing_field' => 'hidden',
+      'body' => 'ds_content',
+      'field_child_communities' => 'ds_content',
+      'field_comm_protocols' => 'hidden',
+      'field_community_featured_colls' => 'ds_content',
+      'field_community_image' => 'ds_content',
+      'field_community_image_thumbnail' => 'ds_content',
+      'field_dhan_notified_users' => 'hidden',
+      'field_membership_list_options' => 'ds_content',
+      'field_parent_community' => 'ds_content',
+      'field_pre_actions' => 'ds_content',
+      'group_access' => 'ds_content',
+      'group_advanced' => 'ds_content',
+      'group_basic' => 'ds_content',
+      'group_custom_tk_label_text' => 'ds_content',
+      'group_group' => 'hidden',
+      'group_register' => 'ds_content',
+      'group_tabs' => 'ds_content',
+      'og_group_ref' => 'hidden',
+      'og_roles_permissions' => 'ds_content',
+      'path' => 'ds_content',
+      'redirect' => 'ds_content',
+      'title' => 'ds_content',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
@@ -516,45 +552,9 @@ function ma_community_ds_layout_settings_info() {
         22 => '_add_existing_field',
       ),
     ),
-    'fields' => array(
-      'title' => 'ds_content',
-      'group_basic' => 'ds_content',
-      'field_pre_actions' => 'ds_content',
-      'body' => 'ds_content',
-      'group_tabs' => 'ds_content',
-      'group_advanced' => 'ds_content',
-      'field_community_image' => 'ds_content',
-      'group_access' => 'ds_content',
-      'redirect' => 'ds_content',
-      'field_community_image_thumbnail' => 'ds_content',
-      'path' => 'ds_content',
-      'field_parent_community' => 'ds_content',
-      'group_group' => 'hidden',
-      'og_roles_permissions' => 'ds_content',
-      'group_register' => 'ds_content',
-      'field_child_communities' => 'ds_content',
-      'og_group_ref' => 'hidden',
-      'field_membership_list_options' => 'ds_content',
-      'field_community_featured_colls' => 'ds_content',
-      'field_dhan_notified_users' => 'hidden',
-      'group_custom_tk_label_text' => 'ds_content',
-      'field_comm_protocols' => 'hidden',
-      '_add_existing_field' => 'hidden',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|community|form'] = $ds_layout;
 
@@ -566,11 +566,33 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'full';
   $ds_layout->layout = 'bootstrap_6_6_stacked';
   $ds_layout->settings = array(
-    'regions' => array(
-      'top' => array(
-        0 => 'field_community_image',
-        1 => 'mukurtu_mobile_sync',
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
       ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'community_browse_all_dh_link' => 'right',
+      'community_dh_items' => 'left',
+      'community_membership_status' => 'right',
+      'community_protocol_items' => 'right',
+      'create_content_block_ds_field' => 'right',
+      'featured_collections' => 'right',
+      'field_child_communities' => 'right',
+      'field_community_image' => 'top',
+      'field_parent_community' => 'right',
+      'group_management_links' => 'left',
+      'group_members' => 'right',
+      'mukurtu_mobile_sync' => 'top',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
+    'regions' => array(
       'left' => array(
         2 => 'group_management_links',
         3 => 'body',
@@ -586,39 +608,17 @@ function ma_community_ds_layout_settings_info() {
         11 => 'featured_collections',
         12 => 'create_content_block_ds_field',
       ),
-    ),
-    'fields' => array(
-      'field_community_image' => 'top',
-      'mukurtu_mobile_sync' => 'top',
-      'group_management_links' => 'left',
-      'body' => 'left',
-      'community_dh_items' => 'left',
-      'community_membership_status' => 'right',
-      'group_members' => 'right',
-      'community_protocol_items' => 'right',
-      'field_parent_community' => 'right',
-      'field_child_communities' => 'right',
-      'community_browse_all_dh_link' => 'right',
-      'featured_collections' => 'right',
-      'create_content_block_ds_field' => 'right',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
+      'top' => array(
+        0 => 'field_community_image',
+        1 => 'mukurtu_mobile_sync',
       ),
     ),
     'wrappers' => array(
-      'top' => 'div',
+      'bottom' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'bottom' => 'div',
+      'top' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|community|full'] = $ds_layout;
 
@@ -630,6 +630,30 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'mukurtu_mobile';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'ds_content',
+      'field_child_communities' => 'ds_content',
+      'field_comm_dh_items' => 'ds_content',
+      'field_comm_protocols' => 'ds_content',
+      'field_community_featured_colls' => 'ds_content',
+      'field_community_image' => 'ds_content',
+      'field_parent_community' => 'ds_content',
+      'title' => 'ds_content',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
+    'limit' => array(
+      'field_comm_dh_items' => '8',
+    ),
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
@@ -642,33 +666,9 @@ function ma_community_ds_layout_settings_info() {
         7 => 'field_comm_dh_items',
       ),
     ),
-    'fields' => array(
-      'title' => 'ds_content',
-      'field_community_image' => 'ds_content',
-      'body' => 'ds_content',
-      'field_comm_protocols' => 'ds_content',
-      'field_parent_community' => 'ds_content',
-      'field_child_communities' => 'ds_content',
-      'field_community_featured_colls' => 'ds_content',
-      'field_comm_dh_items' => 'ds_content',
-    ),
-    'limit' => array(
-      'field_comm_dh_items' => '8',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|community|mukurtu_mobile'] = $ds_layout;
 
@@ -680,6 +680,24 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'teaser';
   $ds_layout->layout = 'bootstrap_4_8';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'right',
+      'featured_content_type' => 'right',
+      'field_community_image_thumbnail' => 'left',
+      'mukurtu_mobile_sync' => 'right',
+      'title' => 'right',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'left' => array(
         0 => 'field_community_image_thumbnail',
@@ -691,28 +709,10 @@ function ma_community_ds_layout_settings_info() {
         4 => 'body',
       ),
     ),
-    'fields' => array(
-      'field_community_image_thumbnail' => 'left',
-      'title' => 'right',
-      'mukurtu_mobile_sync' => 'right',
-      'featured_content_type' => 'right',
-      'body' => 'right',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'left' => 'div',
       'right' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|community|teaser'] = $ds_layout;
 
@@ -724,30 +724,30 @@ function ma_community_ds_layout_settings_info() {
   $ds_layout->view_mode = 'thumbed';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'field_community_image_thumbnail' => 'ds_content',
+      'title' => 'ds_content',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
         1 => 'field_community_image_thumbnail',
       ),
     ),
-    'fields' => array(
-      'title' => 'ds_content',
-      'field_community_image_thumbnail' => 'ds_content',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|community|thumbed'] = $ds_layout;
 

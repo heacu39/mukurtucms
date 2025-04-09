@@ -36,6 +36,7 @@ function ma_profile_field_default_field_instances() {
       'custom_add_another' => '',
       'custom_remove' => '',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'mee_enabled' => 0,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -47,6 +48,44 @@ function ma_profile_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'user-user-field_dhan_frequency'.
+  $field_instances['user-user-field_dhan_frequency'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+    ),
+    'display_label' => '',
+    'ds_extras_field_template' => '',
+    'entity_type' => 'user',
+    'field_name' => 'field_dhan_frequency',
+    'label' => 'DHAN Frequency',
+    'required' => 0,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'treeable' => 0,
+      ),
+      'type' => 'options_buttons',
+      'weight' => 9,
     ),
   );
 
@@ -78,6 +117,7 @@ function ma_profile_field_default_field_instances() {
       ),
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => 0,
     ),
     'widget' => array(
@@ -95,41 +135,6 @@ function ma_profile_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_dhan_frequency'.
-  $field_instances['user-user-field_dhan_frequency'] = array(
-    'bundle' => 'user',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 3,
-      ),
-    ),
-    'display_label' => '',
-    'ds_extras_field_template' => '',
-    'entity_type' => 'user',
-    'field_name' => 'field_dhan_frequency',
-    'label' => 'DHAN Frequency',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => 0,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'treeable' => 0,
-      ),
-      'type' => 'options_buttons',
-      'weight' => 9,
-    ),
-  );
-  
   // Exported field_instance: 'user-user-field_notifications_freq_def'.
   $field_instances['user-user-field_notifications_freq_def'] = array(
     'bundle' => 'user',
@@ -157,6 +162,7 @@ function ma_profile_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => 0,
     ),
     'widget' => array(
@@ -175,7 +181,7 @@ function ma_profile_field_default_field_instances() {
     'bundle' => 'user',
     'custom_add_another' => '',
     'custom_remove' => '',
-    'default_value' => NULL,
+    'default_value' => array(),
     'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
@@ -205,6 +211,7 @@ function ma_profile_field_default_field_instances() {
       ),
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'select2_integration' => array(
         'styling' => array(
           'dropdownAutoWidth' => 0,

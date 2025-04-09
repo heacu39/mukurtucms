@@ -20,6 +20,12 @@ function ma_culturalprotocol_menu_default_menu_links() {
     'options' => array(
       'identifier' => 'main-menu_-cultural-protocol:node/add/cultural-protocol-group',
       'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -28,6 +34,8 @@ function ma_culturalprotocol_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -46,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
 

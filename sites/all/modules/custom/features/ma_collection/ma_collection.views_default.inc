@@ -109,24 +109,6 @@ function ma_collection_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['child_collections_entity_reference'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('All'),
-    t('Entity Reference'),
-  );
   $export['child_collections_entity_reference'] = $view;
 
   $view = new view();
@@ -212,26 +194,6 @@ function ma_collection_views_default_views() {
   $handler = $view->new_display('panel_pane', 'All', 'all');
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $translatables['collections'] = array(
-    t('Master'),
-    t('more'),
-    t('Search'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('No results matched your search.'),
-    t('CER » Context'),
-    t('All'),
-    t('View panes'),
-  );
   $export['collections'] = $view;
 
   $view = new view();
@@ -324,29 +286,6 @@ function ma_collection_views_default_views() {
   $handler = $view->new_display('panel_pane', 'All', 'all');
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $translatables['collections_grid_list'] = array(
-    t('Master'),
-    t('more'),
-    t('Search'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Grid/List switcher'),
-    t('<div><a class="list btn btn-default">List</a> <a class="grid btn btn-default">Grid</a></div>'),
-    t('No results matched your search.'),
-    t('CER » Context'),
-    t('Fulltext search'),
-    t('All'),
-    t('View panes'),
-  );
   $export['collections_grid_list'] = $view;
 
   $view = new view();
@@ -415,23 +354,6 @@ function ma_collection_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['dh_nodes_available_to_collection'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Entity Reference'),
-  );
   $export['dh_nodes_available_to_collection'] = $view;
 
   $view = new view();
@@ -518,28 +440,6 @@ function ma_collection_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['personal_collections'] = array(
-    t('Master'),
-    t('Personal Collections'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Add a Personal Collection'),
-    t('<a href="/node/add/personal-collection">+ Add a Personal Collection</a>'),
-    t('Need this to ensure the footer renders'),
-    t('All'),
-    t('Block'),
-  );
   $export['personal_collections'] = $view;
 
   return $export;

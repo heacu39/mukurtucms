@@ -82,23 +82,6 @@ function ma_dictionary_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['dh_nodes_available_to_dictionary_word'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Entity Reference'),
-  );
   $export['dh_nodes_available_to_dictionary_word'] = $view;
 
   $view = new view();
@@ -178,26 +161,6 @@ function ma_dictionary_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['dictionary_word_related_dh_items_teasers'] = array(
-    t('Master'),
-    t('DH Related Items Teasers'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Content referencing Content from field_dictionary_word_related_dh'),
-    t('All'),
-    t('Block'),
-  );
   $export['dictionary_word_related_dh_items_teasers'] = $view;
 
   $view = new view();
@@ -298,31 +261,6 @@ function ma_dictionary_views_default_views() {
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $translatables['dictionary_words'] = array(
-    t('Master'),
-    t('more'),
-    t('Search'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Grid/List switcher'),
-    t('<div><a class="list btn btn-default">List</a> <a class="grid btn btn-default">Grid</a></div>'),
-    t('No results matched your search.'),
-    t('CER » Context'),
-    t('Fulltext search'),
-    t('Content pane'),
-    t('View panes'),
-    t('Dictionary Browse'),
-    t('Dictionary browse for Mukurtu theme v2'),
-  );
   $export['dictionary_words'] = $view;
 
   $view = new view();
@@ -365,15 +303,6 @@ function ma_dictionary_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'language_community' => 'language_community',
-  );
-  $translatables['language_communities'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
   );
   $export['language_communities'] = $view;
 
@@ -473,38 +402,6 @@ function ma_dictionary_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'dashboard/manage-dictionaries';
-  $translatables['manage_dictionaries'] = array(
-    t('Master'),
-    t('Manage Language Communities'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('A language community enables the dictionary for a given language and provides a group to control who can modify the dictionary.
-
-'),
-    t('No Languages Available'),
-    t('There are currently no languages available. Please add a language using the <a href="/admin/structure/taxonomy/language">Manage Languages</a> page.'),
-    t('Representative node'),
-    t('Term ID'),
-    t('.'),
-    t(','),
-    t('1'),
-    t('@count'),
-    t('Language'),
-    t('Language Community'),
-    t('Not created. <a href=\'/node/add/language-community/[tid]\'>Create [name] Language Community</a>'),
-    t('Page'),
-  );
   $export['manage_dictionaries'] = $view;
 
   $view = new view();
@@ -572,23 +469,6 @@ function ma_dictionary_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['words_available_to_collection'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Entity Reference'),
-  );
   $export['words_available_to_collection'] = $view;
 
   return $export;

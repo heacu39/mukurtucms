@@ -19,14 +19,14 @@ function ma_culturalprotocol_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'browse_teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
-      'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
+        'class' => '',
         'link' => '1',
         'wrapper' => 'h2',
-        'class' => '',
       ),
+      'label' => 'hidden',
+      'weight' => '1',
     ),
   );
   $export['node|cultural_protocol_group|browse_teaser'] = $ds_fieldsetting;
@@ -39,24 +39,24 @@ function ma_culturalprotocol_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'admin_actions' => array(
+      'format' => 'default',
+      'label' => 'hidden',
       'weight' => '6',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'comments' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
     ),
     'author' => array(
-      'weight' => '5',
-      'label' => 'hidden',
       'format' => 'author',
+      'label' => 'hidden',
+      'weight' => '5',
+    ),
+    'comments' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '1',
+    ),
+    'title' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|cultural_protocol_group|default'] = $ds_fieldsetting;
@@ -69,25 +69,25 @@ function ma_culturalprotocol_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'featured_content';
   $ds_fieldsetting->settings = array(
     'featured_content_type' => array(
-      'weight' => '2',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '2',
     ),
     'featured_content_view_link' => array(
-      'weight' => '0',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
     'title' => array(
-      'weight' => '3',
-      'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h2',
         'class' => '',
         'ft' => array(),
+        'link' => '1',
+        'wrapper' => 'h2',
       ),
+      'label' => 'hidden',
+      'weight' => '3',
     ),
   );
   $export['node|cultural_protocol_group|featured_content'] = $ds_fieldsetting;
@@ -99,45 +99,35 @@ function ma_culturalprotocol_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'cultural_protocol_group';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'mukurtu_mobile_sync' => array(
-      'weight' => '0',
-      'label' => 'hidden',
+    'create_content_block_ds_field' => array(
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '7',
     ),
     'dhan_notify' => array(
-      'weight' => '6',
-      'label' => 'above',
       'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(
           'lb-col' => TRUE,
         ),
       ),
+      'label' => 'above',
+      'weight' => '6',
     ),
     'group_management_links' => array(
-      'weight' => '2',
-      'label' => 'hidden',
       'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '2',
     ),
     'group_members' => array(
+      'format' => 'default',
+      'label' => 'hidden',
       'weight' => '4',
-      'label' => 'hidden',
-      'format' => 'default',
     ),
-    'create_content_block_ds_field' => array(
-      'weight' => '7',
+    'mukurtu_mobile_sync' => array(
+      'format' => 'default',
       'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'protocol_dh_items' => array(
-      'weight' => '3',
-      'label' => 'above',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb-col' => TRUE,
-        ),
-      ),
+      'weight' => '0',
     ),
     'og_group_ref' => array(
       'formatter_settings' => array(
@@ -145,6 +135,16 @@ function ma_culturalprotocol_ds_field_settings_info() {
           'lb-col' => TRUE,
         ),
       ),
+    ),
+    'protocol_dh_items' => array(
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-col' => TRUE,
+        ),
+      ),
+      'label' => 'above',
+      'weight' => '3',
     ),
   );
   $export['node|cultural_protocol_group|full'] = $ds_fieldsetting;
@@ -156,20 +156,20 @@ function ma_culturalprotocol_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'cultural_protocol_group';
   $ds_fieldsetting->view_mode = 'mukurtu_mobile';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
+    'field_comm_dh_items' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
     ),
     'og_group_ref' => array(
       'formatter_settings' => array(
         'ft' => array(),
       ),
     ),
-    'field_comm_dh_items' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
+    'title' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|cultural_protocol_group|mukurtu_mobile'] = $ds_fieldsetting;
@@ -181,33 +181,33 @@ function ma_culturalprotocol_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'cultural_protocol_group';
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
-    'featured_content_type' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h2',
-        'class' => '',
-        'ft' => array(),
-      ),
-    ),
     'body' => array(
       'formatter_settings' => array(
         'ft' => array(
           'lb-col' => TRUE,
         ),
       ),
+    ),
+    'featured_content_type' => array(
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-col' => TRUE,
+        ),
+      ),
+      'label' => 'hidden',
+      'weight' => '0',
+    ),
+    'title' => array(
+      'format' => 'default',
+      'formatter_settings' => array(
+        'class' => '',
+        'ft' => array(),
+        'link' => '1',
+        'wrapper' => 'h2',
+      ),
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|cultural_protocol_group|teaser'] = $ds_fieldsetting;
@@ -253,22 +253,22 @@ function ma_culturalprotocol_ds_layout_settings_info() {
   $ds_layout->view_mode = 'browse_teaser';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'fields' => array(
+      'field_media' => 'ds_content',
+      'title' => 'ds_content',
+    ),
     'hide_empty_regions' => 0,
     'hide_sidebars' => 0,
+    'limit' => array(
+      'field_media' => '1',
+    ),
     'regions' => array(
       'ds_content' => array(
         0 => 'field_media',
         1 => 'title',
       ),
     ),
-    'fields' => array(
-      'field_media' => 'ds_content',
-      'title' => 'ds_content',
-    ),
-    'limit' => array(
-      'field_media' => '1',
-    ),
-    'classes' => array(),
   );
   $export['node|cultural_protocol_group|browse_teaser'] = $ds_layout;
 
@@ -280,6 +280,25 @@ function ma_culturalprotocol_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'admin_actions' => 'right',
+      'author' => 'right',
+      'body' => 'left',
+      'comments' => 'left',
+      'group_register' => 'left',
+      'title' => 'header',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => 0,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'header' => array(
         0 => 'title',
@@ -294,31 +313,12 @@ function ma_culturalprotocol_ds_layout_settings_info() {
         4 => 'admin_actions',
       ),
     ),
-    'fields' => array(
-      'title' => 'header',
-      'comments' => 'left',
-      'body' => 'left',
-      'author' => 'right',
-      'admin_actions' => 'right',
-      'group_register' => 'left',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
+      'footer' => 'div',
       'header' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'footer' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['node|cultural_protocol_group|default'] = $ds_layout;
 
@@ -330,6 +330,24 @@ function ma_culturalprotocol_ds_layout_settings_info() {
   $ds_layout->view_mode = 'featured_content';
   $ds_layout->layout = 'bootstrap_12';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'central',
+      'featured_content_type' => 'central',
+      'featured_content_view_link' => 'central',
+      'field_protocol_image_thumbnail' => 'central',
+      'title' => 'central',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'central' => array(
         0 => 'featured_content_view_link',
@@ -339,27 +357,9 @@ function ma_culturalprotocol_ds_layout_settings_info() {
         4 => 'body',
       ),
     ),
-    'fields' => array(
-      'featured_content_view_link' => 'central',
-      'field_protocol_image_thumbnail' => 'central',
-      'featured_content_type' => 'central',
-      'title' => 'central',
-      'body' => 'central',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'central' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|cultural_protocol_group|featured_content'] = $ds_layout;
 
@@ -371,51 +371,51 @@ function ma_culturalprotocol_ds_layout_settings_info() {
   $ds_layout->view_mode = 'full';
   $ds_layout->layout = 'bootstrap_6_6_stacked';
   $ds_layout->settings = array(
-    'regions' => array(
-      'top' => array(
-        0 => 'mukurtu_mobile_sync',
-        1 => 'field_protocol_image',
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
       ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'create_content_block_ds_field' => 'right',
+      'dhan_notify' => 'right',
+      'field_protocol_image' => 'top',
+      'group_management_links' => 'left',
+      'group_members' => 'right',
+      'mukurtu_mobile_sync' => 'top',
+      'og_group_ref' => 'right',
+      'protocol_dh_items' => 'left',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
+    'regions' => array(
       'left' => array(
         2 => 'body',
         3 => 'group_management_links',
         4 => 'protocol_dh_items',
       ),
       'right' => array(
+        4 => 'group_members',
         5 => 'og_group_ref',
         6 => 'dhan_notify',
         7 => 'create_content_block_ds_field',
-        4 => 'group_members',
       ),
-    ),
-    'fields' => array(
-      'mukurtu_mobile_sync' => 'top',
-      'field_protocol_image' => 'top',
-      'body' => 'left',
-      'group_management_links' => 'left',
-      'protocol_dh_items' => 'left',
-      'group_members' => 'right',
-      'og_group_ref' => 'right',
-      'dhan_notify' => 'right',
-      'create_content_block_ds_field' => 'right',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
+      'top' => array(
+        0 => 'mukurtu_mobile_sync',
+        1 => 'field_protocol_image',
       ),
     ),
     'wrappers' => array(
-      'top' => 'div',
+      'bottom' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'bottom' => 'div',
+      'top' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|cultural_protocol_group|full'] = $ds_layout;
 
@@ -427,6 +427,27 @@ function ma_culturalprotocol_ds_layout_settings_info() {
   $ds_layout->view_mode = 'mukurtu_mobile';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'ds_content',
+      'field_comm_dh_items' => 'ds_content',
+      'field_protocol_image' => 'ds_content',
+      'og_group_ref' => 'ds_content',
+      'title' => 'ds_content',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
+    'limit' => array(
+      'field_comm_dh_items' => '8',
+    ),
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
@@ -436,30 +457,9 @@ function ma_culturalprotocol_ds_layout_settings_info() {
         4 => 'field_comm_dh_items',
       ),
     ),
-    'fields' => array(
-      'title' => 'ds_content',
-      'field_protocol_image' => 'ds_content',
-      'body' => 'ds_content',
-      'og_group_ref' => 'ds_content',
-      'field_comm_dh_items' => 'ds_content',
-    ),
-    'limit' => array(
-      'field_comm_dh_items' => '8',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|cultural_protocol_group|mukurtu_mobile'] = $ds_layout;
 
@@ -471,37 +471,37 @@ function ma_culturalprotocol_ds_layout_settings_info() {
   $ds_layout->view_mode = 'teaser';
   $ds_layout->layout = 'bootstrap_4_8';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'right',
+      'featured_content_type' => 'right',
+      'field_protocol_image_thumbnail' => 'left',
+      'title' => 'right',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
+      'left' => array(
+        1 => 'field_protocol_image_thumbnail',
+      ),
       'right' => array(
         0 => 'title',
         2 => 'featured_content_type',
         3 => 'body',
-      ),
-      'left' => array(
-        1 => 'field_protocol_image_thumbnail',
-      ),
-    ),
-    'fields' => array(
-      'title' => 'right',
-      'field_protocol_image_thumbnail' => 'left',
-      'featured_content_type' => 'right',
-      'body' => 'right',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
       ),
     ),
     'wrappers' => array(
       'left' => 'div',
       'right' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|cultural_protocol_group|teaser'] = $ds_layout;
 

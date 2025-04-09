@@ -27,6 +27,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -67,6 +68,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -104,6 +106,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -148,6 +151,7 @@ function ma_digitalheritage_field_default_field_bases() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -174,6 +178,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -214,6 +219,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -250,6 +256,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'locked' => 0,
     'module' => 'node_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'referenceable_types' => array(
         'article' => 0,
         'calendar' => 0,
@@ -300,10 +307,11 @@ function ma_digitalheritage_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'dh_type',
           'parent' => 0,
+          'vocabulary' => 'dh_type',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -330,6 +338,7 @@ function ma_digitalheritage_field_default_field_bases() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
@@ -356,6 +365,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -395,6 +405,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'locked' => 0,
     'module' => 'partial_date',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'estimates' => array(
         'day' => array(
           '0|12' => 'The start of the month',
@@ -493,10 +504,11 @@ function ma_digitalheritage_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'people',
           'parent' => 0,
+          'vocabulary' => 'people',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -519,6 +531,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -559,6 +572,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
@@ -598,6 +612,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -639,6 +654,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
       'treeable' => FALSE,
     ),
@@ -661,6 +677,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'locked' => 0,
     'module' => 'atom_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -682,6 +699,7 @@ function ma_digitalheritage_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,

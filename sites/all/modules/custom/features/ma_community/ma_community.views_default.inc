@@ -62,7 +62,7 @@ function ma_community_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -79,26 +79,6 @@ function ma_community_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['community_featured_collections'] = array(
-    t('Master'),
-    t('Featured Collections'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Content referencing Content from field_community_featured_colls'),
-    t('All'),
-    t('Block'),
-  );
   $export['community_featured_collections'] = $view;
 
   $view = new view();
@@ -193,7 +173,7 @@ function ma_community_views_default_views() {
   $handler->display->display_options['arguments']['gid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['gid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['gid']['validate']['type'] = 'og';
-  /* Filter criterion: User: Active */
+  /* Filter criterion: User: Active status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -226,36 +206,6 @@ function ma_community_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
-  $translatables['group_members'] = array(
-    t('Defaults'),
-    t('Members'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('<div class="add-manage-members-links">
-<div class="add-members-link btn btn-default btn-sm">
-<?php print l(t(\'Add Members\'), "group/node/!1/admin/people/add-user");?>
-</div>
-<div class="manage-members-link btn btn-default btn-sm">
-<?php print l(t(\'Manage Members\'), "group/node/!1/admin/people");?>
-</div>
-</div>
-'),
-    t('OG membership from user'),
-    t('OG Roles from OG membership'),
-    t('All'),
-    t('Block'),
-  );
   $export['group_members'] = $view;
 
   return $export;

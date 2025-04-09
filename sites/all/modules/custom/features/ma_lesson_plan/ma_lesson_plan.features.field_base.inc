@@ -26,6 +26,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
       'treeable' => 0,
     ),
@@ -48,6 +49,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -69,6 +71,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -90,6 +93,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -111,6 +115,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -132,6 +137,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -153,6 +159,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -174,6 +181,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -198,6 +206,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'hide_blank_items' => 1,
       'hide_initial_item' => 1,
       'path' => '',
@@ -225,6 +234,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'hide_blank_items' => 1,
       'hide_initial_item' => 1,
       'path' => '',
@@ -249,6 +259,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -270,6 +281,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -291,6 +303,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -312,6 +325,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -335,10 +349,11 @@ function ma_lesson_plan_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'unit_class_period_length',
           'parent' => 0,
+          'vocabulary' => 'unit_class_period_length',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -360,6 +375,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -383,10 +399,11 @@ function ma_lesson_plan_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'unit_grade_level',
           'parent' => 0,
+          'vocabulary' => 'unit_grade_level',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -408,6 +425,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -430,6 +448,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -469,6 +488,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -490,6 +510,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -513,10 +534,11 @@ function ma_lesson_plan_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'subject',
           'parent' => 0,
+          'vocabulary' => 'subject',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -540,10 +562,11 @@ function ma_lesson_plan_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'unit_teacher',
           'parent' => 0,
+          'vocabulary' => 'unit_teacher',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -565,6 +588,7 @@ function ma_lesson_plan_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -588,10 +612,11 @@ function ma_lesson_plan_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'unit_unit_length',
           'parent' => 0,
+          'vocabulary' => 'unit_unit_length',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -615,10 +640,11 @@ function ma_lesson_plan_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'unit_week_of',
           'parent' => 0,
+          'vocabulary' => 'unit_week_of',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,

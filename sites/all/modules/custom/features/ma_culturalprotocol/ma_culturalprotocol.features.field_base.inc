@@ -33,6 +33,7 @@ function ma_culturalprotocol_field_default_field_bases() {
         'open' => 'Open group, anyone can join',
       ),
       'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -59,6 +60,7 @@ function ma_culturalprotocol_field_default_field_bases() {
         1 => '',
       ),
       'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -80,6 +82,7 @@ function ma_culturalprotocol_field_default_field_bases() {
     'locked' => 0,
     'module' => 'atom_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -101,6 +104,7 @@ function ma_culturalprotocol_field_default_field_bases() {
     'locked' => 0,
     'module' => 'atom_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,

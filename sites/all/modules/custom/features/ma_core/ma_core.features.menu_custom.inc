@@ -16,6 +16,8 @@ function ma_core_menu_default_menu_custom() {
     'menu_name' => 'main-menu',
     'title' => 'Main menu',
     'description' => 'This menu shows for all users. It includes the "utility" buttons (login, logout, my account) and for all content curators and above, the content creation buttons.',
+    'language' => 'und',
+    'i18n_mode' => 5,
   );
   // Exported menu: menu-browse-menu.
   $menus['menu-browse-menu'] = array(
@@ -23,6 +25,8 @@ function ma_core_menu_default_menu_custom() {
     'title' => 'Browse Menu',
     'description' => 'The Browse Menu is for viewing content.
 ',
+    'language' => 'und',
+    'i18n_mode' => 0,
   );
   // Translatables
   // Included for use with string extractors like potx.

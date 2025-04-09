@@ -331,6 +331,16 @@ function ma_dictionary_default_page_manager_pages() {
   $display->layout = 'flexible';
   $display->layout_settings = array(
     'items' => array(
+      1 => array(
+        'children' => array(
+          0 => 'search_facets',
+        ),
+        'class' => 'dictionary-facets',
+        'contains' => 'region',
+        'hide_empty' => 0,
+        'parent' => 'main',
+        'type' => 'row',
+      ),
       'canvas' => array(
         'children' => array(
           0 => 'main',
@@ -374,16 +384,6 @@ function ma_dictionary_default_page_manager_pages() {
         'type' => 'region',
         'width' => 100,
         'width_type' => '%',
-      ),
-      1 => array(
-        'children' => array(
-          0 => 'search_facets',
-        ),
-        'class' => 'dictionary-facets',
-        'contains' => 'region',
-        'hide_empty' => 0,
-        'parent' => 'main',
-        'type' => 'row',
       ),
     ),
   );

@@ -93,24 +93,6 @@ function ma_digitalheritage_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $translatables['dh_nodes_available_to_dh'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('All'),
-    t('Entity Reference'),
-  );
   $export['dh_nodes_available_to_dh'] = $view;
 
   $view = new view();
@@ -190,26 +172,6 @@ function ma_digitalheritage_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['dh_related_items_teasers'] = array(
-    t('Master'),
-    t('DH Related Items Teasers'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Content referencing Content from field_related_content'),
-    t('All'),
-    t('Block'),
-  );
   $export['dh_related_items_teasers'] = $view;
 
   $view = new view();
@@ -412,35 +374,6 @@ function ma_digitalheritage_views_default_views() {
   );
   $handler->display->display_options['filters']['status']['expose']['reduce'] = 0;
   $handler->display->display_options['inherit_panels_path'] = '1';
-  $translatables['digital_heritage_grid_list'] = array(
-    t('Master'),
-    t('more'),
-    t('Search'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Grid/List switcher'),
-    t('<div><a class="list btn">List</a> <a class="grid btn">Grid</a> <a class="map btn">Map</a></div>'),
-    t('No results matched your search.'),
-    t('Node ID'),
-    t('.'),
-    t(','),
-    t('All'),
-    t('View panes'),
-    t('Community-filtered'),
-    t('All (Map)'),
-    t('Location'),
-    t('Title'),
-    t('Status'),
-  );
   $export['digital_heritage_grid_list'] = $view;
 
   $view = new view();
@@ -916,45 +849,6 @@ return FALSE;';
   $handler->display->display_options['filters']['field_dictionary_word_language_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_dictionary_word_language_tid']['vocabulary'] = 'language';
   $handler->display->display_options['path'] = 'manage/dictionary-words';
-  $translatables['export_digital_heritage'] = array(
-    t('Master'),
-    t('Export Digital Heritage'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Select All'),
-    t('- Choose an operation -'),
-    t('Title'),
-    t('Media Assets'),
-    t('Updated date'),
-    t('Summary'),
-    t('Community'),
-    t('Category'),
-    t('Creator'),
-    t('Contributor'),
-    t('Original Date Description'),
-    t('Collections'),
-    t('Category (field_category)'),
-    t('Community Record Parent (field_community_record_parent)'),
-    t('Is Community Record'),
-    t('Book Parent (field_book_parent)'),
-    t('Book Pages'),
-    t('Digital Heritage'),
-    t('Dictionary'),
-    t('Export Dictionary Words'),
-    t('Language'),
-    t('Keywords'),
-  );
   $export['export_digital_heritage'] = $view;
 
   return $export;

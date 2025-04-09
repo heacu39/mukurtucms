@@ -23,7 +23,8 @@ function ma_dictionary_init() {
         'link_title' => '+ Dictionary Word',
         'menu_name' => 'main-menu',
         'weight' => -45,
-        'expanded' => 0,
+	'expanded' => 0,
+	'hidden' => 1,
         'customized' => 1,
         'options' => array(
           'attributes' => array('title' => 'Add a word to the dictionary'),

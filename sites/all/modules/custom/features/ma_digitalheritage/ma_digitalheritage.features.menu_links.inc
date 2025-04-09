@@ -22,6 +22,12 @@ function ma_digitalheritage_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Add a term to the existing taxonomy "category"',
       ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -30,6 +36,8 @@ function ma_digitalheritage_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -49,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
   // Exported menu link: main-menu_-digital-heritage:node/add/digital-heritage.
@@ -43,6 +51,12 @@ function ma_digitalheritage_menu_default_menu_links() {
       'attributes' => array(
         'title' => 'Add digital heritage content to the archive',
       ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -51,6 +65,8 @@ function ma_digitalheritage_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -50,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
 

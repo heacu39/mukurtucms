@@ -26,6 +26,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -48,6 +49,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'atom_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => 0,
     ),
     'translatable' => 0,
@@ -69,6 +71,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
       'treeable' => FALSE,
     ),
@@ -96,6 +99,7 @@ function ma_dictionary_field_default_field_bases() {
         1 => 'User-defined sort',
       ),
       'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -117,6 +121,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 1,
       'treeable' => FALSE,
     ),
@@ -141,6 +146,7 @@ function ma_dictionary_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(),
       'allowed_values_function' => 'ma_dictionary_collation_locale_options',
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -167,6 +173,7 @@ function ma_dictionary_field_default_field_bases() {
         1 => '',
       ),
       'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -190,10 +197,11 @@ function ma_dictionary_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'language',
           'parent' => 0,
+          'vocabulary' => 'language',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -215,6 +223,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -238,10 +247,11 @@ function ma_dictionary_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'language',
           'parent' => 0,
+          'vocabulary' => 'language',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -263,6 +273,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'atom_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -285,6 +296,7 @@ function ma_dictionary_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(
@@ -324,6 +336,7 @@ function ma_dictionary_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'og',
       'handler_settings' => array(
         'behaviors' => array(
@@ -366,10 +379,11 @@ function ma_dictionary_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'part_of_speech',
           'parent' => 0,
+          'vocabulary' => 'part_of_speech',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -391,6 +405,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -412,6 +427,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 510,
       'treeable' => FALSE,
     ),
@@ -434,6 +450,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
       'treeable' => FALSE,
     ),
@@ -452,6 +469,7 @@ function ma_dictionary_field_default_field_bases() {
     'locked' => 0,
     'module' => 'paragraphs',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -474,6 +492,7 @@ function ma_dictionary_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -516,6 +535,7 @@ function ma_dictionary_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'views',
       'handler_settings' => array(
         'behaviors' => array(

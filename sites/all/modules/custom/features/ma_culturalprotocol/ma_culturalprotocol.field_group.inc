@@ -21,8 +21,6 @@ function ma_culturalprotocol_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
-    'label' => 'Advanced',
-    'weight' => '2',
     'children' => array(
       0 => 'field_membership_list_options',
       1 => 'field_protocol_auto_join',
@@ -30,16 +28,18 @@ function ma_culturalprotocol_field_group_info() {
       3 => 'group_register',
       4 => 'og_roles_permissions',
     ),
-    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Advanced',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'required_fields' => 0,
         'classes' => '',
         'description' => '',
+        'required_fields' => 0,
       ),
-      'formatter' => 'open',
+      'label' => 'Advanced',
     ),
+    'format_type' => 'htab',
+    'label' => 'Advanced',
+    'weight' => '2',
   );
   $field_groups['group_advanced|node|cultural_protocol_group|form'] = $field_group;
 
@@ -53,8 +53,6 @@ function ma_culturalprotocol_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
-    'label' => 'Basic',
-    'weight' => '1',
     'children' => array(
       0 => 'body',
       1 => 'field_protocl_signup_permissions',
@@ -65,16 +63,18 @@ function ma_culturalprotocol_field_group_info() {
       6 => 'field_dhan_notified_users',
       7 => 'title',
     ),
-    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Basic',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'required_fields' => 1,
         'classes' => '',
         'description' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'open',
+      'label' => 'Basic',
     ),
+    'format_type' => 'htab',
+    'label' => 'Basic',
+    'weight' => '1',
   );
   $field_groups['group_basic|node|cultural_protocol_group|form'] = $field_group;
 
@@ -88,19 +88,19 @@ function ma_culturalprotocol_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Tabs',
-    'weight' => '1',
     'children' => array(
       0 => 'group_advanced',
       1 => 'group_basic',
     ),
-    'format_type' => 'htabs',
     'format_settings' => array(
       'formatter' => '',
       'instance_settings' => array(
         'classes' => '',
       ),
     ),
+    'format_type' => 'htabs',
+    'label' => 'Tabs',
+    'weight' => '1',
   );
   $field_groups['group_tabs|node|cultural_protocol_group|form'] = $field_group;
 

@@ -45,6 +45,7 @@ function ma_core_field_default_field_instances() {
       'custom_remove' => '',
       'display_summary' => TRUE,
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -92,6 +93,7 @@ function ma_core_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'select2_integration' => array(
         'styling' => array(
           'dropdownAutoWidth' => 0,
@@ -152,6 +154,7 @@ function ma_core_field_default_field_instances() {
       'custom_add_another' => '',
       'custom_remove' => '',
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'field/image',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -203,6 +206,7 @@ function ma_core_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'select2_integration' => array(
         'allow_add_onfly' => 0,
         'show_voc_terms_page_link' => 0,
@@ -258,6 +262,7 @@ function ma_core_field_default_field_instances() {
       'custom_add_another' => '',
       'custom_remove' => '',
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'mee_enabled' => 1,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -316,6 +321,7 @@ function ma_core_field_default_field_instances() {
       'custom_remove' => '',
       'display_summary' => 0,
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -370,6 +376,7 @@ function ma_core_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 'audio',
         'file' => 0,

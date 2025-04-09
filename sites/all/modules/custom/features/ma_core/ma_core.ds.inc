@@ -43,6 +43,28 @@ function ma_core_ds_layout_settings_info() {
   $ds_layout->view_mode = 'form';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
+    'classes' => array(
+      'layout_class' => array(
+        '' => '',
+      ),
+    ),
+    'fields' => array(
+      '_add_existing_field' => 'hidden',
+      'body' => 'ds_content',
+      'field_category' => 'ds_content',
+      'field_image' => 'ds_content',
+      'field_tags' => 'ds_content',
+      'field_test_assets' => 'ds_content',
+      'path' => 'ds_content',
+      'redirect' => 'hidden',
+      'title' => 'ds_content',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => FALSE,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
@@ -58,31 +80,9 @@ function ma_core_ds_layout_settings_info() {
         8 => '_add_existing_field',
       ),
     ),
-    'fields' => array(
-      'title' => 'ds_content',
-      'field_category' => 'ds_content',
-      'field_tags' => 'ds_content',
-      'field_image' => 'ds_content',
-      'body' => 'ds_content',
-      'path' => 'ds_content',
-      'redirect' => 'hidden',
-      'field_test_assets' => 'ds_content',
-      '_add_existing_field' => 'hidden',
-    ),
-    'classes' => array(
-      'layout_class' => array(
-        '' => '',
-      ),
-    ),
     'wrappers' => array(
       'ds_content' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|article|form'] = $ds_layout;
 
@@ -94,18 +94,6 @@ function ma_core_ds_layout_settings_info() {
   $ds_layout->view_mode = 'full';
   $ds_layout->layout = '3col_unbalanced_html5';
   $ds_layout->settings = array(
-    'hide_empty_regions' => 0,
-    'hide_sidebars' => 0,
-    'regions' => array(
-      'left' => array(
-        0 => 'body',
-        1 => 'comments',
-      ),
-    ),
-    'fields' => array(
-      'body' => 'left',
-      'comments' => 'left',
-    ),
     'classes' => array(
       'header' => array(
         'grid-6' => 'grid-6',
@@ -115,6 +103,18 @@ function ma_core_ds_layout_settings_info() {
       ),
       'right' => array(
         'grid-2' => 'grid-2',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'comments' => 'left',
+    ),
+    'hide_empty_regions' => 0,
+    'hide_sidebars' => 0,
+    'regions' => array(
+      'left' => array(
+        0 => 'body',
+        1 => 'comments',
       ),
     ),
   );

@@ -18,13 +18,14 @@ function ma_core_menu_default_menu_links() {
     'router_path' => 'node/add',
     'link_title' => 'Add Content',
     'options' => array(
+      'identifier' => 'main-menu_add-content:node/add',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'main-menu_add-content:node/add',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -33,6 +34,8 @@ function ma_core_menu_default_menu_links() {
     'expanded' => 1,
     'weight' => -50,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: main-menu_dashboard:dashboard.
   $menu_links['main-menu_dashboard:dashboard'] = array(
@@ -48,6 +51,7 @@ function ma_core_menu_default_menu_links() {
         'class' => '',
         'style' => '',
       ),
+      'alter' => TRUE,
     ),
     'module' => 'system',
     'hidden' => 0,
@@ -56,6 +60,8 @@ function ma_core_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -41,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: main-menu_log-in:user/login.
   $menu_links['main-menu_log-in:user/login'] = array(
@@ -64,8 +70,14 @@ function ma_core_menu_default_menu_links() {
     'router_path' => 'user/login',
     'link_title' => 'Log in',
     'options' => array(
-      'attributes' => array(),
       'identifier' => 'main-menu_log-in:user/login',
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 1,
@@ -74,6 +86,8 @@ function ma_core_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -39,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: main-menu_log-out:user/logout.
   $menu_links['main-menu_log-out:user/logout'] = array(
@@ -82,8 +96,14 @@ function ma_core_menu_default_menu_links() {
     'router_path' => 'user/logout',
     'link_title' => 'Log out',
     'options' => array(
-      'attributes' => array(),
       'identifier' => 'main-menu_log-out:user/logout',
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'system',
     'hidden' => 1,
@@ -92,6 +112,8 @@ function ma_core_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -40,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: main-menu_user-account:user.
   $menu_links['main-menu_user-account:user'] = array(
@@ -116,6 +138,8 @@ function ma_core_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -42,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
   );
 
   // Translatables

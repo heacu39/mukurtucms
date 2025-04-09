@@ -23,6 +23,7 @@ dependencies[] = leaflet
 dependencies[] = leaflet_more_maps
 dependencies[] = leaflet_views
 dependencies[] = license
+dependencies[] = link
 dependencies[] = list
 dependencies[] = ma_base_theme
 dependencies[] = ma_core

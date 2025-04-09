@@ -18,6 +18,7 @@ function ma_lesson_plan_menu_default_menu_links() {
     'router_path' => 'node/add/lesson',
     'link_title' => '+ Lesson',
     'options' => array(
+      'identifier' => 'main-menu_-lesson:node/add/lesson',
       'attributes' => array(
         'class' => array(
           0 => 'mukurtu-actions',
@@ -28,7 +29,7 @@ function ma_lesson_plan_menu_default_menu_links() {
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'main-menu_-lesson:node/add/lesson',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 1,
@@ -37,6 +38,8 @@ function ma_lesson_plan_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -43,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
   // Exported menu link: main-menu_-unit-plan:node/add/unit-plan.
@@ -46,6 +49,7 @@ function ma_lesson_plan_menu_default_menu_links() {
     'router_path' => 'node/add/unit-plan',
     'link_title' => '+ Unit Plan',
     'options' => array(
+      'identifier' => 'main-menu_-unit-plan:node/add/unit-plan',
       'attributes' => array(
         'class' => array(
           0 => 'mukurtu-actions',
@@ -56,7 +60,7 @@ function ma_lesson_plan_menu_default_menu_links() {
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'main-menu_-unit-plan:node/add/unit-plan',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 1,
@@ -65,6 +69,8 @@ function ma_lesson_plan_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -41,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
 

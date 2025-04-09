@@ -24,6 +24,12 @@ function ma_community_menu_default_menu_links() {
           0 => 'mukurtu-actions',
         ),
       ),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -32,6 +38,8 @@ function ma_community_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -47,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
 

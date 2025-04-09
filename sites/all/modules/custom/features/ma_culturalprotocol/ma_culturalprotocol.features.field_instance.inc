@@ -36,6 +36,7 @@ function ma_culturalprotocol_field_default_field_instances() {
       'custom_add_another' => '',
       'custom_remove' => '',
       'dnd_enabled' => 0,
+      'entity_translation_sync' => FALSE,
       'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -113,6 +114,7 @@ function ma_culturalprotocol_field_default_field_instances() {
       'custom_remove' => '',
       'display_summary' => 0,
       'dnd_enabled' => 1,
+      'entity_translation_sync' => FALSE,
       'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -193,6 +195,7 @@ function ma_culturalprotocol_field_default_field_instances() {
       ),
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'select2_integration' => array(
         'styling' => array(
           'dropdownAutoWidth' => 0,
@@ -272,6 +275,7 @@ function ma_culturalprotocol_field_default_field_instances() {
       ),
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -338,6 +342,7 @@ function ma_culturalprotocol_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -402,6 +407,7 @@ function ma_culturalprotocol_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -466,6 +472,7 @@ function ma_culturalprotocol_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -530,6 +537,7 @@ function ma_culturalprotocol_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -598,6 +606,7 @@ function ma_culturalprotocol_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -673,6 +682,7 @@ function ma_culturalprotocol_field_default_field_instances() {
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -744,6 +754,7 @@ Strict - This cultural protocol and the items within it are shared with, visible
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'view modes' => array(
@@ -823,6 +834,7 @@ Strict - This cultural protocol and the items within it are shared with, visible
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'view modes' => array(
@@ -905,6 +917,7 @@ Strict - This cultural protocol and the items within it are shared with, visible
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'view modes' => array(
@@ -1014,6 +1027,7 @@ Strict - This cultural protocol and the items within it are shared with, visible
       ),
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'select2_integration' => array(
         'styling' => array(
           'dropdownAutoWidth' => 0,
@@ -1104,6 +1118,7 @@ Strict - This cultural protocol and the items within it are shared with, visible
     'settings' => array(
       'custom_add_another' => '',
       'custom_remove' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'view modes' => array(

@@ -18,8 +18,14 @@ function ma_collection_menu_default_menu_links() {
     'router_path' => 'node/add/collection',
     'link_title' => '+ Collection',
     'options' => array(
-      'attributes' => array(),
       'identifier' => 'main-menu_-collection:node/add/collection',
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -28,6 +34,8 @@ function ma_collection_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -48,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
   // Exported menu link: main-menu_-personal-collection:node/add/personal-collection.
@@ -37,13 +45,14 @@ function ma_collection_menu_default_menu_links() {
     'router_path' => 'node/add/personal-collection',
     'link_title' => '+ Personal Collection',
     'options' => array(
+      'identifier' => 'main-menu_-personal-collection:node/add/personal-collection',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'main-menu_-personal-collection:node/add/personal-collection',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -52,6 +61,8 @@ function ma_collection_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => -42,
     'customized' => 1,
+    'language' => 'en',
+    'menu_links_customized' => 1,
     'parent_identifier' => 'main-menu_add-content:node/add',
   );
 

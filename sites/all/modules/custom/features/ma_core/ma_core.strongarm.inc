@@ -281,23 +281,23 @@ unit-plan-bottom';
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_delete_log_entity_types';
   $strongarm->value = array(
-    'scald_atom' => 'scald_atom',
+    'cer' => 0,
     'comment' => 'comment',
     'field_collection_item' => 'field_collection_item',
-    'node' => 'node',
-    'og_membership_type' => 'og_membership_type',
-    'og_membership' => 'og_membership',
     'file' => 'file',
+    'flagging' => 0,
+    'node' => 'node',
+    'og_membership' => 'og_membership',
+    'og_membership_type' => 'og_membership_type',
+    'redirect' => 0,
+    'rules_config' => 0,
+    'scald_atom' => 'scald_atom',
+    'search_api_index' => 0,
+    'search_api_server' => 0,
     'taxonomy_term' => 'taxonomy_term',
     'taxonomy_vocabulary' => 'taxonomy_vocabulary',
     'user' => 'user',
-    'cer' => 0,
-    'flagging' => 0,
-    'redirect' => 0,
-    'search_api_server' => 0,
-    'search_api_index' => 0,
     'wysiwyg_profile' => 0,
-    'rules_config' => 0,
   );
   $export['entity_delete_log_entity_types'] = $strongarm;
 
@@ -306,14 +306,11 @@ unit-plan-bottom';
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__article';
   $strongarm->value = array(
-    'view_modes' => array(),
     'extra_fields' => array(
+      'display' => array(),
       'form' => array(
         'flag' => array(
           'weight' => '10',
-        ),
-        'title' => array(
-          'weight' => '-5',
         ),
         'path' => array(
           'weight' => '30',
@@ -321,9 +318,12 @@ unit-plan-bottom';
         'redirect' => array(
           'weight' => '30',
         ),
+        'title' => array(
+          'weight' => '-5',
+        ),
       ),
-      'display' => array(),
     ),
+    'view_modes' => array(),
   );
   $export['field_bundle_settings_node__article'] = $strongarm;
 
@@ -332,9 +332,20 @@ unit-plan-bottom';
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__page';
   $strongarm->value = array(
+    'extra_fields' => array(
+      'display' => array(),
+      'form' => array(
+        'path' => array(
+          'weight' => '30',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+      ),
+    ),
     'view_modes' => array(
-      'teaser' => array(
-        'custom_settings' => TRUE,
+      'browse_teaser' => array(
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => TRUE,
@@ -348,20 +359,9 @@ unit-plan-bottom';
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
-      'browse_teaser' => array(
-        'custom_settings' => FALSE,
+      'teaser' => array(
+        'custom_settings' => TRUE,
       ),
-    ),
-    'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
-          'weight' => '30',
-        ),
-      ),
-      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__page'] = $strongarm;
@@ -440,7 +440,7 @@ unit-plan-bottom';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_jquery_version';
-  $strongarm->value = '1.10';
+  $strongarm->value = '1.12';
   $export['jquery_update_jquery_version'] = $strongarm;
 
   $strongarm = new stdClass();

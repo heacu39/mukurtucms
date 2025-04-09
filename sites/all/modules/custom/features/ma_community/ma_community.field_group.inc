@@ -21,8 +21,6 @@ function ma_community_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
-    'label' => 'Advanced',
-    'weight' => '1',
     'children' => array(
       0 => 'field_membership_list_options',
       1 => 'group_access',
@@ -30,16 +28,18 @@ function ma_community_field_group_info() {
       3 => 'og_roles_permissions',
       4 => 'group_custom_tk_label_text',
     ),
-    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Advanced',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'required_fields' => 0,
         'classes' => '',
         'description' => '',
+        'required_fields' => 0,
       ),
-      'formatter' => 'open',
+      'label' => 'Advanced',
     ),
+    'format_type' => 'htab',
+    'label' => 'Advanced',
+    'weight' => '1',
   );
   $field_groups['group_advanced|node|community|form'] = $field_group;
 
@@ -53,8 +53,6 @@ function ma_community_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_tabs';
   $field_group->data = array(
-    'label' => 'Basic',
-    'weight' => '0',
     'children' => array(
       0 => 'body',
       1 => 'field_child_communities',
@@ -64,16 +62,18 @@ function ma_community_field_group_info() {
       5 => 'field_parent_community',
       6 => 'title',
     ),
-    'format_type' => 'htab',
     'format_settings' => array(
-      'label' => 'Basic',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'required_fields' => 1,
         'classes' => '',
         'description' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'open',
+      'label' => 'Basic',
     ),
+    'format_type' => 'htab',
+    'label' => 'Basic',
+    'weight' => '0',
   );
   $field_groups['group_basic|node|community|form'] = $field_group;
 
@@ -87,20 +87,20 @@ function ma_community_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_advanced';
   $field_group->data = array(
-    'label' => 'Custom TK Label Text',
-    'weight' => '7',
     'children' => array(),
-    'format_type' => 'fieldset',
     'format_settings' => array(
-      'label' => 'Custom TK Label Text',
+      'formatter' => 'open',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'id' => '',
         'classes' => 'group-custom-tk-label-text field-group-div',
         'description' => 'Tick a TK label\'s checkbox to customize its text. Hover over the label to see its default (non-customized) text.',
+        'id' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'open',
+      'label' => 'Custom TK Label Text',
     ),
+    'format_type' => 'fieldset',
+    'label' => 'Custom TK Label Text',
+    'weight' => '7',
   );
   $field_groups['group_custom_tk_label_text|node|community|form'] = $field_group;
 
@@ -114,19 +114,19 @@ function ma_community_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Tabs',
-    'weight' => '1',
     'children' => array(
       0 => 'group_advanced',
       1 => 'group_basic',
     ),
-    'format_type' => 'htabs',
     'format_settings' => array(
-      'label' => 'Tabs',
       'instance_settings' => array(
         'classes' => '',
       ),
+      'label' => 'Tabs',
     ),
+    'format_type' => 'htabs',
+    'label' => 'Tabs',
+    'weight' => '1',
   );
   $field_groups['group_tabs|node|community|form'] = $field_group;
 

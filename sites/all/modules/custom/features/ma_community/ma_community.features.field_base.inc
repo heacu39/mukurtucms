@@ -27,6 +27,7 @@ function ma_community_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -69,6 +70,7 @@ function ma_community_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -109,6 +111,7 @@ function ma_community_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -149,6 +152,7 @@ function ma_community_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -188,6 +192,7 @@ function ma_community_field_default_field_bases() {
     'locked' => 0,
     'module' => 'atom_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -209,6 +214,7 @@ function ma_community_field_default_field_bases() {
     'locked' => 0,
     'module' => 'atom_reference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -231,6 +237,7 @@ function ma_community_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 1,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
@@ -274,6 +281,7 @@ function ma_community_field_default_field_bases() {
         'managers' => 'Display only community managers/protocol stewards',
       ),
       'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
       'treeable' => FALSE,
     ),
     'translatable' => 0,
@@ -296,6 +304,7 @@ function ma_community_field_default_field_bases() {
     'module' => 'entityreference',
     'settings' => array(
       'duplicates' => 0,
+      'entity_translation_sync' => FALSE,
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(

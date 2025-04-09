@@ -27,45 +27,45 @@ function ma_core_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'mukurtu_splash-manage_community' => array(
+        'mukurtu_splash-demo_config' => array(
+          'delta' => 'demo_config',
           'module' => 'mukurtu_splash',
+          'region' => 'dashboard_main',
+          'weight' => '-10',
+        ),
+        'mukurtu_splash-manage_community' => array(
           'delta' => 'manage_community',
+          'module' => 'mukurtu_splash',
           'region' => 'dashboard_main',
           'weight' => '-22',
         ),
         'mukurtu_splash-manage_content' => array(
-          'module' => 'mukurtu_splash',
           'delta' => 'manage_content',
+          'module' => 'mukurtu_splash',
           'region' => 'dashboard_main',
           'weight' => '-21',
         ),
-        'mukurtu_splash-demo_config' => array(
+        'mukurtu_splash-site_config' => array(
+          'delta' => 'site_config',
           'module' => 'mukurtu_splash',
-          'delta' => 'demo_config',
-          'region' => 'dashboard_main',
+          'region' => 'dashboard_sidebar',
           'weight' => '-10',
         ),
-        'mukurtu_splash-user' => array(
+        'mukurtu_splash-site_start' => array(
+          'delta' => 'site_start',
           'module' => 'mukurtu_splash',
-          'delta' => 'user',
           'region' => 'dashboard_sidebar',
           'weight' => '-10',
         ),
         'mukurtu_splash-support' => array(
-          'module' => 'mukurtu_splash',
           'delta' => 'support',
+          'module' => 'mukurtu_splash',
           'region' => 'dashboard_sidebar',
           'weight' => '-9',
         ),
-        'mukurtu_splash-site_start' => array(
+        'mukurtu_splash-user' => array(
+          'delta' => 'user',
           'module' => 'mukurtu_splash',
-          'delta' => 'site_start',
-          'region' => 'dashboard_sidebar',
-          'weight' => '-10',
-        ),
-        'mukurtu_splash-site_config' => array(
-          'module' => 'mukurtu_splash',
-          'delta' => 'site_config',
           'region' => 'dashboard_sidebar',
           'weight' => '-10',
         ),
@@ -97,14 +97,14 @@ function ma_core_context_default_contexts() {
     'block' => array(
       'blocks' => array(
         'boxes-ma_site_header' => array(
-          'module' => 'boxes',
           'delta' => 'ma_site_header',
+          'module' => 'boxes',
           'region' => 'content',
           'weight' => '-10',
         ),
         'views-communities_content-block_1' => array(
-          'module' => 'views',
           'delta' => 'communities_content-block_1',
+          'module' => 'views',
           'region' => 'content',
           'weight' => '-9',
         ),
@@ -141,14 +141,14 @@ function ma_core_context_default_contexts() {
     'block' => array(
       'blocks' => array(
         'delta_blocks-breadcrumb' => array(
-          'module' => 'delta_blocks',
           'delta' => 'breadcrumb',
+          'module' => 'delta_blocks',
           'region' => 'header',
           'weight' => '-10',
         ),
         'mukurtu_theme_blocks-mukurtu_theme_footer' => array(
-          'module' => 'mukurtu_theme_blocks',
           'delta' => 'mukurtu_theme_footer',
+          'module' => 'mukurtu_theme_blocks',
           'region' => 'footer',
           'weight' => '-10',
         ),
@@ -185,28 +185,28 @@ function ma_core_context_default_contexts() {
     'block' => array(
       'blocks' => array(
         'bean-frontpage-hero-image-one-column' => array(
-          'module' => 'bean',
           'delta' => 'frontpage-hero-image-one-column',
+          'module' => 'bean',
           'region' => 'header',
           'weight' => '-9',
         ),
         'bean-frontpage-hero-image-two-columns' => array(
-          'module' => 'bean',
           'delta' => 'frontpage-hero-image-two-columns',
+          'module' => 'bean',
           'region' => 'header',
           'weight' => '-8',
         ),
-        'views-c3e75cf63f3ce664337f20e351ba7938' => array(
-          'module' => 'views',
-          'delta' => 'c3e75cf63f3ce664337f20e351ba7938',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
         'views-450f9588d7199dab32cfdceb4015cb67' => array(
-          'module' => 'views',
           'delta' => '450f9588d7199dab32cfdceb4015cb67',
+          'module' => 'views',
           'region' => 'content',
           'weight' => '-8',
+        ),
+        'views-c3e75cf63f3ce664337f20e351ba7938' => array(
+          'delta' => 'c3e75cf63f3ce664337f20e351ba7938',
+          'module' => 'views',
+          'region' => 'content',
+          'weight' => '-9',
         ),
       ),
     ),
@@ -241,8 +241,8 @@ function ma_core_context_default_contexts() {
     'block' => array(
       'blocks' => array(
         'boxes-ma_site_footer' => array(
-          'module' => 'boxes',
           'delta' => 'ma_site_footer',
+          'module' => 'boxes',
           'region' => 'footer',
           'weight' => '-10',
         ),
