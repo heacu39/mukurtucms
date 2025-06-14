@@ -1,0 +1,296 @@
+<?php
+
+/**
+ * @file
+ * Defines a Bilibili provider for Scald.
+ */
+
+// @codingStandardsIgnoreStart
+define('BILIBILI_ID_REGEXP', '/^[a-zA-Z0-9]+$/');
+define('BILIBILI_WEB_REGEXP', '#^https://www.bilibili.com/video/([a-zA-Z0-9]+)/.*$#');
+// @codingStandardsIgnoreEnd
+  
+/**
+ * Implements hook_scald_atom_providers().
+ *
+ * Tell Scald that we'll be providing some video atoms.
+ */
+function scald_bilibili_scald_atom_providers() {
+  return array(
+    'video' => 'Video hosted on Bilibili',
+  );
+  // This code will never be hit, but is necessary to mark the string
+  // for translation on localize.d.o.
+  // @codingStandardsIgnoreLine
+  t('Video hosted on Bilibili');
+}
+
+/**
+ * Implements hook_scald_add_form().
+ */
+function scald_bilibili_scald_add_form(&$form, &$form_state) {
+  $form['identifier'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Bilibili video identifier or URL'),
+    '#element_validate' => array('scald_bilibili_validate_id'),
+    '#default_value' => '',
+  );
+}
+
+/**
+ * Implements hook_scald_add_form_fill().
+ */
+function scald_bilibili_scald_add_form_fill(&$atom, $form, $form_state) {
+
+  // Get the identifier.
+  $identifier = scald_bilibili_parse_id($form_state['values']['identifier'], TRUE);
+
+  // Get video info.
+  $infos = scald_bilibili_video($identifier);
+
+  $atom->base_id = $identifier;
+  $atom->title = $infos->title;
+
+  // Prefill the author.
+  $langcode = field_language('scald_atom', $atom, 'scald_authors');
+  $atom->scald_authors[$langcode][0] = array(
+    'tid' => 0,
+    'taxonomy_term' => (object) (array('name' => $infos->author)),
+  );
+
+  $atom->data['video_width'] = $infos->width;
+  $atom->data['video_height'] = $infos->height;
+
+  // Download a copy of the video thumbnail. This makes it possible
+  // to do interesting manipulation with image styles presets.
+  $thumb = drupal_http_request($infos->thumbnail['src']);
+  if ($thumb->code == 200 && $directory = ScaldAtomController::getThumbnailPath('video')) {
+    $dest = $directory . '/bilibili-' . $infos->id . '.jpg';
+    $file = file_save_data($thumb->data, $dest);
+
+    if ($file) {
+      // Set the file status to temporary.
+      $query = db_update('file_managed')
+        ->condition('fid', $file->fid)
+        ->fields(array('status' => 0))
+        ->execute();
+      $langcode = field_language('scald_atom', $atom, 'scald_thumbnail');
+      $atom->scald_thumbnail[$langcode][0] = (array) $file;
+    }
+  }
+}
+
+/**
+ * Implements hook_scald_fetch().
+ */
+function scald_bilibili_scald_fetch($atom, $type) {
+  $items = field_get_items('scald_atom', $atom, 'scald_thumbnail');
+  if ($items && file_exists($items[0]['uri'])) {
+    $atom->file_source = $atom->thumbnail_source = $items[0]['uri'];
+  }
+}
+
+/**
+ * Implements hook_scald_prerender().
+ */
+function scald_bilibili_scald_prerender($atom, $context, $options, $mode) {
+  if ($mode == 'atom') {
+    // Load context configuration to retrieve dimension data if present.
+    $context_config = scald_context_config_load($context);
+    $video_width = (isset($atom->data['video_width'])) ? $atom->data['video_width'] : 480;
+    $video_height = (isset($atom->data['video_height'])) ? $atom->data['video_height'] : 365;
+    // Allow context configuration to override video dimension variables.
+    if (!empty($context_config->data['width'])) {
+      $video_width = $context_config->data['width'];
+    }
+    if (!empty($context_config->data['height'])) {
+      $video_height = $context_config->data['height'];
+    }
+    $atom->rendered->player = theme('scald_bilibili_player',
+      array(
+        'vars' => array(
+          'video_id'      => $atom->base_id,
+          'video_width'   => $video_width,
+          'video_height'  => $video_height,
+          'thumbnail'     => $atom->thumbnail_source,
+          'title'         => check_plain($atom->title),
+        ),
+        'atom' => $atom,
+      )
+    );
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function scald_bilibili_theme() {
+  return array(
+    'scald_bilibili_player' => array(
+      'variables' => array('vars' => NULL, 'atom' => NULL),
+      'template' => 'scald_bilibili_player',
+    ),
+  );
+}
+
+/**
+ * Function to register.
+ *
+ * Creates an atom based on a Bilibili video id or an object
+ * containing the video informations..
+ *
+ * @param mixed $video
+ *   Unique identifier of the video on Bilibili, or object
+ *   returned by scald_bilibili_video.
+ *
+ * @return int
+ *   Unique identifier of the new atom
+ */
+function scald_bilibili_register($video) {
+  global $user;
+  // Fetch the needed informations from Bilibili.
+  if (is_object($video)) {
+    $infos = $video;
+  }
+  else {
+    $infos = scald_bilibili_video($video);
+  }
+
+  // Check if the video has already been imported to prevent duplicate.
+  $old = scald_bilibili_already_imported($infos->id);
+  if ($old) {
+    return FALSE;
+  }
+
+  // Download a copy of the video thumbnail. This makes it possible
+  // to do interesting manipulation with image styles presets.
+  $thumb = drupal_http_request($infos->thumbnail['src']);
+  $dir = 'public://bilibili';
+  if ($thumb->code == 200 && file_prepare_directory($dir, FILE_CREATE_DIRECTORY)) {
+    $dest = $dir . '/' . $infos->id . '.jpg';
+    $file = file_save_data($thumb->data, $dest);
+  }
+
+  // Create an atom.
+  $atom = new ScaldAtom('video', 'scald_bilibili', array(
+    'base_id' => $infos->id,
+    'title' => $infos->title,
+  ));
+
+  // Save video width and height.
+  if (!isset($atom->data)) {
+    $atom->data = array();
+  }
+  $atom->data['video_width'] = $infos->width;
+  $atom->data['video_height'] = $infos->height;
+
+  // Set file.
+  if ($file) {
+    $query = db_update('file_managed')
+      ->condition('fid', $file->fid)
+      ->fields(array('status' => 0))
+      ->execute();
+    $langcode = field_language('scald_atom', $atom, 'scald_thumbnail');
+    $atom->scald_thumbnail[$langcode][0] = (array) $file;
+  }
+
+  // And save it.
+  $atom_sid = scald_atom_save($atom);
+  // Finally, return this id.
+  return $atom_sid;
+}
+
+/**
+ * Analyze the Bilibili feed for a specific video.
+ */
+function scald_bilibili_video($id) {
+  $items = array();
+  $url = "https://api.bilibili.com/x/web-interface/view?bvid=$id";
+  $response = json_decode(file_get_contents($url));
+  $items[] = scald_bilibili_parse_response($response);
+  return $items[0];
+}
+
+
+/**
+ * Analyze a JSON response to extract interesting info.
+ *
+ * @param object $response
+ *   An object of classe DOMElement corresponding to an element of the feed.
+ *
+ * @return array
+ *   An abject containing various video informations.
+ */
+function scald_bilibili_parse_response($response) {
+  $info = new stdClass();
+
+  // Fetch the video ID.
+  $info->id = $response->data->bvid;
+
+  // Video Title.
+  $info->title = $response->data->title;
+
+  // Video dimensions.
+  $info->width = $response->data->dimension->width;
+  $info->height = $response->data->dimension->height;
+
+  // Thumbnail data.
+  $info->thumbnail = array(
+    'src'    => $response->data->pic,
+    'width'  => $response->data->dimension->width,
+    'height' => $response->data->dimension->height,
+  );
+
+  // Author.
+  $info->author = $response->data->owner->name;
+
+  // Creation Date.
+  $info->pubDate = $response->data->pubdate;
+
+  return $info;
+}
+
+/**
+ * Checks if a video has already been imported, based on its video id.
+ *
+ * @param int $id
+ *   The video identifier.
+ *  
+ * @return mixed
+ *   FALSE if the video was never imported, the scald identifier of
+ *   the video otherwise.
+ */
+function scald_bilibili_already_imported($id) {
+  $query = array('provider' => 'scald_bilibili', 'base_id' => $id);
+  return scald_search($query, FALSE, TRUE);
+}
+
+/**
+ * Form element validation handler for Bilibili identifier.
+ */
+function scald_bilibili_validate_id($element, &$form_state) {
+  $id = scald_bilibili_parse_id($form_state['values']['identifier'], TRUE);
+  if (!$id) {
+    form_error($element, t('Invalid Bilibili video identifier.'));
+  }
+  elseif (scald_bilibili_already_imported($id)) {
+    form_error($element, t('Bilibili video already imported.'));
+  }
+}
+
+/**
+ * Parse a Bilibili ID and check validity.
+ */
+function scald_bilibili_parse_id($string, $check) {
+  $id = NULL;
+  $string = trim($string);
+  if (!preg_match(BILIBILI_ID_REGEXP, $string)) {
+    // The string ID is not easy to parse, let's try to analyze it.
+    preg_match(BILIBILI_WEB_REGEXP, $string, $m);
+    $id = isset($m[1]) ? $m[1] : FALSE;
+  }
+  else {
+    $id = $string;
+  }
+  return $id;
+}

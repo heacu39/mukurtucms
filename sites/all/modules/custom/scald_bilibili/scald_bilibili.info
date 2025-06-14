@@ -1,0 +1,6 @@
+name = Scald Bilibili
+description = Provides Video atoms from Bilibili.
+package = Scald Providers
+core = 7.x
+dependencies[] = scald
+
