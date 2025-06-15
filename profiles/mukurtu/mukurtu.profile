@@ -25,11 +25,11 @@ function mukurtu_install_tasks($install_state) {
     'mukurtu_revert_features' => array(),
     'mukurtu_create_default_content' => array(),
     'mukurtu_revert_features' => array(),
-    'mukurtu_add_languages_form' => array(
-      'display_name' => st('Add languages'),
-      'type' => 'form',
-    ),
-    'mukurtu_enable_languages' => array(),
+    //'mukurtu_add_languages_form' => array(
+    //  'display_name' => st('Add languages'),
+    //  'type' => 'form',
+    //),
+    //'mukurtu_add_languages' => array(),
   );
   return $tasks;
 }
@@ -42,7 +42,7 @@ function mukurtu_add_languages_form() {
   $form['languages'] = array(
     '#type' => 'select',
     '#title' => st('Add languages'),
-    '#description' => st('Select languages to enable in addition to English.'),
+    '#description' => st('Select other languages you wish to add. You can do this later, too.'),
     '#options' => _locale_prepare_predefined_list(),
     '#multiple' => TRUE,
     '#size' => 10,
@@ -67,7 +67,7 @@ function mukurtu_add_languages_form_submit(&$form, &$form_state) {
  * Installation task callback: creates batch process to enable additional
  * languages and download relevant interface translations.
  */
-function mukurtu_enable_languages() {
+function mukurtu_add_languages() {
   include_once DRUPAL_ROOT . '/includes/locale.inc';
 
   if ($languages = variable_get('mukurtu_add_languages', array())) {
@@ -78,18 +78,6 @@ function mukurtu_enable_languages() {
       locale_add_language(strtolower($language));
     }
   }
-}
-
-/**
- * Implement hook_install_tasks_alter().
- */
-function mukurtu_install_tasks_alter(&$tasks, $install_state) {
-  // Set default site language to English.
-  global $install_state;
-  $install_state['parameters']['locale'] = 'en';
-  // Hide 'Choose language' installation task.
-  $tasks['install_select_locale']['display'] = FALSE;
-  $tasks['install_select_locale']['run'] = INSTALL_TASK_SKIP;
 }
 
 /**

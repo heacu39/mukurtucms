@@ -4,3 +4,32 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Alter the list of project to be updated by Localization Update.
+ *
+ * L10n_update uses the same list of projects as update module. Using this hook
+ * the list can be altered. This hook is typically used to alter the following
+ * values from the .info file:
+ *  - interface translation project
+ *  - l10n path.
+ *
+ * @param array $projects
+ *   Array of projects.
+ */
+function ma_chinese_l10n_update_projects_alter(array &$projects) {
+
+  foreach (array_keys($projects) as $name) {
+    // Disable interface translation updates
+    if (!strcmp($name, "ma_chinese")) {
+      $projects[$name]['info']['interface translation project'] = FALSE;
+    }
+  }
+
+  // Set the path to the custom module translation files if not already set.
+  if (isset($projects['ma_chinese']) && empty($projects['ma_chinese']['info']['l10n path'])) {
+    $path = drupal_get_path('module', 'ma_chinese');
+    $projects['ma_chinese']['info']['l10n path'] = $path . '/translations/%language.po';
+  }
+}
+

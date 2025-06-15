@@ -7,7 +7,7 @@
 
 // @codingStandardsIgnoreStart
 define('BILIBILI_ID_REGEXP', '/^[a-zA-Z0-9]+$/');
-define('BILIBILI_WEB_REGEXP', '#^https://www.bilibili.com/video/([a-zA-Z0-9]+)/.*$#');
+define('BILIBILI_WEB_REGEXP', '#^https://www.bilibili.com/video/([a-zA-Z0-9]+)/?(\?.+)?$#');
 // @codingStandardsIgnoreEnd
   
 /**

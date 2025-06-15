@@ -10,8 +10,9 @@ dependencies[] = entity_translation
 dependencies[] = entity_translation_i18n_menu
 dependencies[] = i18n_field
 dependencies[] = i18nviews
-;dependencies[] = ma_chinese
+dependencies[] = ma_chinese
 dependencies[] = scald_bilibili
+dependencies[] = scald_bilibili_features
 
 dependencies[] = admin_menu_toolbar
 dependencies[] = module_filter

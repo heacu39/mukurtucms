@@ -7,7 +7,6 @@ dependencies[] = locale
 dependencies[] = ma_core
 dependencies[] = menu
 features[features_api][] = api:2
-features[language][] = zh-hans
 features[menu_links][] = main-menu_-:admin/people/create
 features[menu_links][] = main-menu_-:admin/structure/taxonomy/category/add
 features[menu_links][] = main-menu_-:node/add/collection
