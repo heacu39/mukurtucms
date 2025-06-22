@@ -13,6 +13,7 @@ dependencies[] = i18nviews
 dependencies[] = ma_chinese
 dependencies[] = scald_bilibili
 dependencies[] = scald_bilibili_features
+dependencies[] = scald_spotify
 
 dependencies[] = admin_menu_toolbar
 dependencies[] = module_filter
