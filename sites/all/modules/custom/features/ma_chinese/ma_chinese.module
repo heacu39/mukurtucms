@@ -19,17 +19,55 @@
  */
 function ma_chinese_l10n_update_projects_alter(array &$projects) {
 
-  foreach (array_keys($projects) as $name) {
-    // Disable interface translation updates
-    if (!strcmp($name, "ma_chinese")) {
-      $projects[$name]['info']['interface translation project'] = FALSE;
-    }
-  }
-
   // Set the path to the custom module translation files if not already set.
-  if (isset($projects['ma_chinese']) && empty($projects['ma_chinese']['info']['l10n path'])) {
+  if (isset($projects['ma_chinese'])) {
     $path = drupal_get_path('module', 'ma_chinese');
     $projects['ma_chinese']['info']['l10n path'] = $path . '/translations/%language.po';
+
+    // With this hook it is also possible to add a new project which does not
+    // exist as a real module or theme project but is treated by the localization
+    // update module as one. The below data is the minimum to be specified.
+    // As in the previous example the 'l10n path' element is optional.
+    $projects['ma_chinese_contrib'] = array(
+      'project_type'  => 'module',
+      'name' => 'ma_chinese_contrib',
+      'info' => array(
+        'name' => 'Mukurtu Chinese Contrib',
+        'version' => '7.x-1.0',
+        'core' => '7.x',
+        'l10n path' => $path . '/translations/contrib.%language.po',
+      ),
+    );
+    $projects['ma_chinese_custom'] = array(
+      'project_type'  => 'module',
+      'name' => 'ma_chinese_custom',
+      'info' => array(
+        'name' => 'Mukurtu Chinese Custom',
+        'version' => '7.x-1.0',
+        'core' => '7.x',
+        'l10n path' => $path . '/translations/custom.%language.po',
+      ),
+    );
+    $projects['ma_chinese_fields'] = array(
+      'project_type'  => 'module',
+      'name' => 'ma_chinese_fields',
+      'info' => array(
+        'name' => 'Mukurtu Chinese Fields',
+        'version' => '7.x-1.0',
+        'core' => '7.x',
+        'l10n path' => $path . '/translations/fields.%language.po',
+      ),
+    );
+    $projects['ma_chinese_views'] = array(
+      'project_type'  => 'module',
+      'name' => 'ma_chinese_views',
+      'info' => array(
+        'name' => 'Mukurtu Chinese Views',
+        'version' => '7.x-1.0',
+        'core' => '7.x',
+        'l10n path' => $path . '/translations/views.%language.po',
+      ),
+    );
   }
 }
 
