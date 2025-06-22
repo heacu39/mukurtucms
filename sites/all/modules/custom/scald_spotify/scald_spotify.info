@@ -1,0 +1,6 @@
+name = Scald Spotify 
+description = Provides Audio atoms from Spotify.
+package = Scald Providers
+core = 7.x
+dependencies[] = scald
+

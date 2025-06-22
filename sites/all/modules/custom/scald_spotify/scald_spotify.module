@@ -1,0 +1,160 @@
+<?php
+
+/**
+ * @file
+ * Defines a Spotify provider for Scald.
+ */
+
+// @codingStandardsIgnoreStart
+define('SPOTIFY_ID_REGEXP', '/^[a-zA-Z0-9]+$/');
+define('SPOTIFY_WEB_REGEXP', '#^https://open.spotify.com/track/([a-zA-Z0-9]+)/?(\?.+)?$#');
+// @codingStandardsIgnoreEnd
+  
+/**
+ * Implements hook_scald_atom_providers().
+ *
+ * Tell Scald that we'll be providing some audio atoms.
+ */
+function scald_spotify_scald_atom_providers() {
+  return array(
+    'video' => 'Audio hosted on Spotify',
+  );
+  // This code will never be hit, but is necessary to mark the string
+  // for translation on localize.d.o.
+  // @codingStandardsIgnoreLine
+  t('Audio hosted on Spotify');
+}
+
+/**
+ * Implements hook_scald_add_form().
+ */
+function scald_spotify_scald_add_form(&$form, &$form_state) {
+  $form['identifier'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Spotify audio identifier or URL'),
+    '#element_validate' => array('scald_spotify_validate_id'),
+    '#default_value' => '',
+  );
+}
+
+/**
+ * Implements hook_scald_add_form_fill().
+ */
+function scald_spotify_scald_add_form_fill(&$atom, $form, $form_state) {
+
+  // Get the identifier.
+  $identifier = scald_spotify_parse_id($form_state['values']['identifier'], TRUE);
+
+  $atom->base_id = $identifier;
+  $atom->title = "";
+}
+
+/**
+ * Implements hook_scald_prerender().
+ */
+function scald_spotify_scald_prerender($atom, $context, $options, $mode) {
+  if ($mode == 'atom') {
+    $atom->rendered->player = theme('scald_spotify_player',
+      array(
+        'vars' => array(
+          'video_id'      => $atom->base_id,
+          'title'         => check_plain($atom->title),
+        ),
+        'atom' => $atom,
+      )
+    );
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function scald_spotify_theme() {
+  return array(
+    'scald_spotify_player' => array(
+      'variables' => array('vars' => NULL, 'atom' => NULL),
+      'template' => 'scald_spotify_player',
+    ),
+  );
+}
+
+/**
+ * Function to register.
+ *
+ * Creates an atom based on a Spotify id or an object
+ * containing the audio informations.
+ *
+ * @param mixed $video
+ *   Unique identifier of the audio on Spotify, or object
+ *   returned by scald_spotify_audio.
+ *
+ * @return int
+ *   Unique identifier of the new atom
+ */
+function scald_spotify_register($audio) {
+  global $user;
+  // Fetch the needed informations from Spotify.
+  $infos = $audio;
+
+  // Check if the video has already been imported to prevent duplicate.
+  $old = scald_bilibili_already_imported($infos->id);
+  if ($old) {
+    return FALSE;
+  }
+
+  // Create an atom.
+  $atom = new ScaldAtom('video', 'scald_spotify', array(
+    'base_id' => $infos->id,
+    'title' => $infos->title,
+  ));
+
+  // And save it.
+  $atom_sid = scald_atom_save($atom);
+  // Finally, return this id.
+  return $atom_sid;
+}
+
+/**
+ * Checks if a audio has already been imported, based on its audio id.
+ *
+ * @param int $id
+ *   The audio identifier.
+ *  
+ * @return mixed
+ *   FALSE if the audio was never imported, the scald identifier of
+ *   the audio otherwise.
+ */
+function scald_spotify_already_imported($id) {
+  $query = array('provider' => 'scald_spotify', 'base_id' => $id);
+  return scald_search($query, FALSE, TRUE);
+}
+
+/**
+ * Form element validation handler for Spotify identifier.
+ */
+function scald_spotify_validate_id($element, &$form_state) {
+  $id = scald_spotify_parse_id($form_state['values']['identifier'], TRUE);
+  if (!$id) {
+    form_error($element, t('Invalid Spotify audio identifier.'));
+  }
+  elseif (scald_spotify_already_imported($id)) {
+    form_error($element, t('Spotify audio already imported.'));
+  }
+}
+
+/**
+ * Parse a Spotify ID and check validity.
+ */
+function scald_spotify_parse_id($string, $check) {
+  $id = NULL;
+  $string = trim($string);
+  if (!preg_match(SPOTIFY_ID_REGEXP, $string)) {
+    // The string ID is not easy to parse, let's try to analyze it.
+    preg_match(SPOTIFY_WEB_REGEXP, $string, $m);
+    $id = isset($m[1]) ? $m[1] : FALSE;
+  }
+  else {
+    $id = $string;
+  }
+  return $id;
+}
