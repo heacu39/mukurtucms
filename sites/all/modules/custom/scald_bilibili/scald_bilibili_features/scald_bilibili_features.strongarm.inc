@@ -15,7 +15,7 @@ function scald_bilibili_features_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'fitvids_customselectors';
-  $strongarm->value = '//player.bilibili.com/player.html';
+  $strongarm->value = "//player.bilibili.com/player.html\r\nhttps://open.spotify.com";
   $export['fitvids_customselectors'] = $strongarm;
 
   return $export;
