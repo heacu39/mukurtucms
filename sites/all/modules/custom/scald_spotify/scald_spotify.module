@@ -7,7 +7,7 @@
 
 // @codingStandardsIgnoreStart
 define('SPOTIFY_ID_REGEXP', '/^[a-zA-Z0-9]+$/');
-define('SPOTIFY_WEB_REGEXP', '#^https://open.spotify.com/track/([a-zA-Z0-9]+)/?(\?.+)?$#');
+define('SPOTIFY_WEB_REGEXP', '#^https://open.spotify.com/((track|episode)/[a-zA-Z0-9]+)/?(\?.+)?$#');
 // @codingStandardsIgnoreEnd
   
 /**
