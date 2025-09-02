@@ -359,136 +359,22 @@ function ma_chinese_menu_default_menu_links() {
     'language' => 'zh-hans',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-browse-menu_x-about:node/1.
-  $menu_links['menu-browse-menu_x-about:node/1'] = array(
-    'menu_name' => 'menu-browse-menu',
-    'link_path' => 'node/1',
-    'router_path' => 'node/%',
-    'link_title' => '关于',
-    'options' => array(
-      'attributes' => array(),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-browse-menu_x-about:node/1',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -44,
-    'customized' => 1,
-    'language' => 'zh-hans',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-browse-menu_x-browse-collections:collections.
-  $menu_links['menu-browse-menu_x-browse-collections:collections'] = array(
-    'menu_name' => 'menu-browse-menu',
-    'link_path' => 'collections',
-    'router_path' => 'collections',
-    'link_title' => '浏览收藏',
-    'options' => array(
-      'attributes' => array(),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-browse-menu_x-browse-collections:collections',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -43,
-    'customized' => 1,
-    'language' => 'zh-hans',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-browse-menu_x-browse-dictionary:dictionary.
-  $menu_links['menu-browse-menu_x-browse-dictionary:dictionary'] = array(
-    'menu_name' => 'menu-browse-menu',
-    'link_path' => 'dictionary',
-    'router_path' => 'dictionary',
-    'link_title' => '浏览字典',
-    'options' => array(
-      'attributes' => array(),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-browse-menu_x-browse-dictionary:dictionary',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -40,
-    'customized' => 1,
-    'language' => 'zh-hans',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-browse-menu_x-browse-digital-heritage:digital-heritage.
-  $menu_links['menu-browse-menu_x-browse-digital-heritage:digital-heritage'] = array(
-    'menu_name' => 'menu-browse-menu',
-    'link_path' => 'digital-heritage',
-    'router_path' => 'digital-heritage',
-    'link_title' => '浏览数字遗产',
-    'options' => array(
-      'attributes' => array(),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-browse-menu_x-browse-digital-heritage:digital-heritage',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -42,
-    'customized' => 1,
-    'language' => 'zh-hans',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: menu-browse-menu_x-browse:browse.
-  $menu_links['menu-browse-menu_x-browse:browse'] = array(
-    'menu_name' => 'menu-browse-menu',
-    'link_path' => 'browse',
-    'router_path' => 'browse',
-    'link_title' => '浏览',
-    'options' => array(
-      'attributes' => array(),
-      'item_attributes' => array(
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-browse-menu_x-browse:browse',
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -41,
-    'customized' => 1,
-    'language' => 'zh-hans',
-    'menu_links_customized' => 1,
-  );
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('+ 个人收藏');
+  t('+ 单位计划');
+  t('+ 收藏');
+  t('+ 数字遗产');
+  t('+ 文化礼仪');
+  t('+ 用户');
+  t('+ 社区');
+  t('+ 类别');
+  t('+ 词典词');
+  t('+ 课程');
+  t('信息面板');
+  t('添加内容');
+  t('用户帐户');
 
   return $menu_links;
 }

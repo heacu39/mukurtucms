@@ -25,11 +25,12 @@ function mukurtu_install_tasks($install_state) {
     'mukurtu_revert_features' => array(),
     'mukurtu_create_default_content' => array(),
     'mukurtu_revert_features' => array(),
-    //'mukurtu_add_languages_form' => array(
-    //  'display_name' => st('Add languages'),
-    //  'type' => 'form',
-    //),
-    //'mukurtu_add_languages' => array(),
+    'mukurtu_add_languages_form' => array(
+      'display_name' => st('Add languages'),
+      'type' => 'form',
+    ),
+    'mukurtu_add_languages' => array(),
+    'mukurtu_enable_ma_chinese' => array(),
   );
   return $tasks;
 }
@@ -78,6 +79,12 @@ function mukurtu_add_languages() {
       locale_add_language(strtolower($language));
     }
   }
+}
+
+function mukurtu_enable_ma_chinese() {
+  $modules = array('ma_chinese'); // Array of module names
+  $enable_dependencies = TRUE; // Whether or not to enable dependant modules
+  module_enable($modules, $enable_dependencies);
 }
 
 /**
@@ -352,60 +359,6 @@ function mukurtu_create_default_content() {
   _ma_base_theme_set_default_browse('digital-heritage');
 
 }
-
-//function mukurtu_client_form() {
-//  $form = array();
-//  $form['intro'] = array(
-//    '#markup' => '<p>' . st('Setup your default client account below.') . '</p>',
-//  );
-//  $form['client_name'] = array(
-//    '#type' => 'textfield',
-//    '#title' => st('Client Username'),
-//    '#required' => TRUE,
-//  );
-//  $form['client_mail'] = array(
-//    '#type' => 'textfield',
-//    '#title' => st('Client E-mail Address'),
-//    '#required' => TRUE,
-//  );
-//  $form['client_pass'] = array(
-//    '#type' => 'password',
-//    '#title' => st('Client Password'),
-//  );
-//  $form['submit'] = array(
-//    '#type' => 'submit',
-//    '#value' => st('Continue'),
-//  );
-//  return $form;
-//}
-//
-//function mukurtu_client_form_validate($form, &$form_state) {
-//  if (!valid_email_address($form_state['values']['client_mail'])) {
-//    form_set_error('client_mail', st('Please enter a valid email address'));
-//  }
-//}
-//
-//function mukurtu_client_form_submit($form, &$form_state) {
-//  $values = $form_state['values'];
-//
-//  // Setup the user account array to programatically create a new user.
-//  $account = array(
-//    'name' => $values['client_name'],
-//    'pass' => !empty($values['client_pass']) ? $values['client_pass'] : user_password(),
-//    'mail' => $values['client_mail'],
-//    'status' => 1,
-//    'init' => $values['client_mail'],
-//  );
-//  $account = user_save(null, $account);
-//
-//  // Assign the client to the "administrator" role.
-//  $role = user_role_load_by_name('administrator');
-//  db_insert('users_roles')
-//    ->fields(array('uid' => $account->uid, 'rid' => $role->rid))
-//    ->execute();
-//}
-
-
 
 /**
  * Implements hook_form_FORM_ID_alter().

@@ -2,8 +2,10 @@
 
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the ma_chinese feature.
  */
+
+include_once 'ma_chinese.features.inc';
 
 /**
  * Alter the list of project to be updated by Localization Update.
@@ -46,26 +48,6 @@ function ma_chinese_l10n_update_projects_alter(array &$projects) {
         'version' => '7.x-1.0',
         'core' => '7.x',
         'l10n path' => $path . '/translations/custom.%language.po',
-      ),
-    );
-    $projects['ma_chinese_fields'] = array(
-      'project_type'  => 'module',
-      'name' => 'ma_chinese_fields',
-      'info' => array(
-        'name' => 'Mukurtu Chinese Fields',
-        'version' => '7.x-1.0',
-        'core' => '7.x',
-        'l10n path' => $path . '/translations/fields.%language.po',
-      ),
-    );
-    $projects['ma_chinese_views'] = array(
-      'project_type'  => 'module',
-      'name' => 'ma_chinese_views',
-      'info' => array(
-        'name' => 'Mukurtu Chinese Views',
-        'version' => '7.x-1.0',
-        'core' => '7.x',
-        'l10n path' => $path . '/translations/views.%language.po',
       ),
     );
   }

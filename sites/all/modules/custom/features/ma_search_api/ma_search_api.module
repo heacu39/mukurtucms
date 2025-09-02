@@ -531,7 +531,7 @@ function ma_search_api_block_view($delta = '') {
   switch ($delta) {
 
     case 'ma_custom_sorts':
-      $block['subject'] = 'Sort';
+      $block['subject'] = t('Sort');
       $search_form = drupal_get_form('ma_search_api_sort_form');
       $block['content'] = drupal_render($search_form);
       break;

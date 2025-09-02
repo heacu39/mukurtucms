@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function ma_chinese_install() {
+    $path = drupal_get_path('module', 'ma_chinese');
+
+    $fcontrib = new stdClass;
+    $fcontrib->uri = $path . '/translations/contrib.zh-hans.po';
+    _locale_import_read_po('db-store', $fcontrib, LOCALE_IMPORT_KEEP, 'zh-hans');
+
+    $fcustom = new stdClass;
+    $fcustom->uri = $path . '/translations/custom.zh-hans.po';
+    _locale_import_read_po('db-store', $fcustom, LOCALE_IMPORT_KEEP, 'zh-hans');
+
+    $ffields = new stdClass;
+    $ffields->uri = $path . '/translations/fields.zh-hans.po';
+    _locale_import_read_po('db-store', $ffields, LOCALE_IMPORT_KEEP, 'zh-hans', 'field');
+
+    $fviews = new stdClass;
+    $fviews->uri = $path . '/translations/views.zh-hans.po';
+    _locale_import_read_po('db-store', $fviews, LOCALE_IMPORT_KEEP, 'zh-hans', 'views');
+
+    $fpanels = new stdClass;
+    $fpanels->uri = $path . '/translations/panels.zh-hans.po';
+    _locale_import_read_po('db-store', $fpanels, LOCALE_IMPORT_KEEP, 'zh-hans', 'panels');
+}
