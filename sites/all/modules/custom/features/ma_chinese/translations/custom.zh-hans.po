@@ -86,6 +86,8 @@
 #  features/ma_taxonomy/ma_taxonomy.info: n/a
 #  features/ma_views_pages/ma_views_pages.info: n/a
 #  features/mukurtu_importer_generator/mukurtu_importer_generator.info: n/a
+#  scald_bilibili/scald_bilibili_features/scald_bilibili_features.info: n/a
+#  features/ma_chinese/ma_chinese.features.menu_links.inc: n/a
 #  features/ma_dhan/ma_dhan.features.field_instance.inc: n/a
 #  features/ma_core/ma_core.features.field_instance.inc: n/a
 #  features/ma_shared_notification_components/ma_shared_notification_components.features.field_instance.inc: n/a
@@ -134,6 +136,7 @@
 #  features/ma_culturalprotocol/ma_culturalprotocol.features.content_menu_links.inc: n/a
 #  features/ma_culturalprotocol/ma_culturalprotocol.features.inc: n/a
 #  features/ma_culturalprotocol/ma_culturalprotocol.module: n/a
+#  features/ma_dashboard/ma_dashboard.features.inc: n/a
 #  mukurtu_content_warnings/mukurtu_content_warnings.admin.inc: n/a
 #  features/ma_dictionary/ma_dictionary.features.menu_links.inc: n/a
 #  license/license.module: n/a
@@ -191,6 +194,10 @@
 #  mukurtu_mods/mukurtu_mods.info: n/a
 #  mukurtu_splash/wizard.tpl.php: n/a
 #  mukurtu_utilities/mukurtu_utilities.module: n/a
+#  scald_bilibili/scald_bilibili.module: n/a
+#  scald_bilibili/scald_bilibili.info: n/a
+#  scald_spotify/scald_spotify.info: n/a
+#  scald_spotify/scald_spotify.module: n/a
 #  views_autocomplete/views_autocomplete.views.inc: n/a
 #  views_autocomplete/views_autocomplete.info: n/a
 #  views_autocomplete/handlers/views_handler_filter_string_autocomplete.inc: n/a
@@ -201,16 +208,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2025-04-08 23:53-0400\n"
-"PO-Revision-Date: 2025-04-08 23:54-0400\n"
+"POT-Creation-Date: 2025-09-17 19:34+0100\n"
+"PO-Revision-Date: 2025-09-17 19:35+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese, Simplified <EMAIL@ADDRESS>\n"
-"Language: zh_CN\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.5\n"
 
 #: features/ma_base_theme/ma_base_theme.features.field_instance.inc:240 mukurtu_theme_blocks/mukurtu_theme_blocks.module:40
 msgid "Hero Image"
@@ -305,7 +312,6 @@ msgid "Grid/List switcher"
 msgstr "网格/列表切换器"
 
 #: features/ma_base_theme/ma_base_theme.views_default.inc:235
-#, fuzzy
 msgid "<div><a class=\"list btn\">List</a> <a class=\"grid btn\">Grid</a> <a class=\"map btn\">Map</a></div>"
 msgstr "<div><a class=\"list btn\">列表</a> <a class=\"grid btn\">网格</a> <a class=\"map btn\">地图</a></div>"
 
@@ -397,9 +403,61 @@ msgstr "穆库图默认浏览页面"
 msgid "Mukurtu Base Theme"
 msgstr "穆库图基础主题"
 
-#: features/ma_base_theme/ma_base_theme.info:0 features/ma_chinese/ma_chinese.info:0 features/ma_collaboration_tools/ma_collaboration_tools.info:0 features/ma_collaboration_tools/modules/oa_comment/oa_comment.info:0 features/ma_collection/ma_collection.info:0 features/ma_community/ma_community.info:0 features/ma_community_manage/ma_community_manage.info:0 features/ma_core/ma_core.info:0 features/ma_culturalprotocol/ma_culturalprotocol.info:0 features/ma_dashboard/ma_dashboard.info:0 features/ma_dhan/ma_dhan.info:0 features/ma_dictionary/ma_dictionary.info:0 features/ma_digitalheritage/ma_digitalheritage.info:0 features/ma_file_fixity/ma_file_fixity.info:0 features/ma_frontpage/ma_frontpage.info:0 features/ma_importexport/ma_importexport.info:0 features/ma_importexport_dc/ma_importexport_dc.info:0 features/ma_importexport_media/ma_importexport_media.info:0 features/ma_importexport_users/ma_importexport_users.info:0 features/ma_lesson_plan/ma_lesson_plan.info:0 features/ma_media/ma_media.info:0 features/ma_mobile_client/ma_mobile_client.info:0 features/ma_person/ma_person.info:0 features/ma_profile/ma_profile.info:0 features/ma_scald/ma_scald.info:0 features/ma_search_api/ma_search_api.info:0 features/ma_services/ma_services.info:0 features/ma_shared_notification_components/ma_shared_notification_components.info:0 features/ma_taxonomy/ma_taxonomy.info:0 features/ma_views_pages/ma_views_pages.info:0 features/mukurtu_importer_generator/mukurtu_importer_generator.info:0
+#: features/ma_base_theme/ma_base_theme.info:0 features/ma_chinese/ma_chinese.info:0 features/ma_collaboration_tools/ma_collaboration_tools.info:0 features/ma_collaboration_tools/modules/oa_comment/oa_comment.info:0 features/ma_collection/ma_collection.info:0 features/ma_community/ma_community.info:0 features/ma_community_manage/ma_community_manage.info:0 features/ma_core/ma_core.info:0 features/ma_culturalprotocol/ma_culturalprotocol.info:0 features/ma_dashboard/ma_dashboard.info:0 features/ma_dhan/ma_dhan.info:0 features/ma_dictionary/ma_dictionary.info:0 features/ma_digitalheritage/ma_digitalheritage.info:0 features/ma_file_fixity/ma_file_fixity.info:0 features/ma_frontpage/ma_frontpage.info:0 features/ma_importexport/ma_importexport.info:0 features/ma_importexport_dc/ma_importexport_dc.info:0 features/ma_importexport_media/ma_importexport_media.info:0 features/ma_importexport_users/ma_importexport_users.info:0 features/ma_lesson_plan/ma_lesson_plan.info:0 features/ma_media/ma_media.info:0 features/ma_mobile_client/ma_mobile_client.info:0 features/ma_person/ma_person.info:0 features/ma_profile/ma_profile.info:0 features/ma_scald/ma_scald.info:0 features/ma_search_api/ma_search_api.info:0 features/ma_services/ma_services.info:0 features/ma_shared_notification_components/ma_shared_notification_components.info:0 features/ma_taxonomy/ma_taxonomy.info:0 features/ma_views_pages/ma_views_pages.info:0 features/mukurtu_importer_generator/mukurtu_importer_generator.info:0 scald_bilibili/scald_bilibili_features/scald_bilibili_features.info:0
 msgid "Features"
 msgstr "特性"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:365
+msgid "+ 个人收藏"
+msgstr "+ 个人收藏"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:366
+msgid "+ 单位计划"
+msgstr "+ 单位计划"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:367
+msgid "+ 收藏"
+msgstr "+ 收藏"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:368
+msgid "+ 数字遗产"
+msgstr "+ 数字遗产"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:369
+msgid "+ 文化礼仪"
+msgstr "+ 文化礼仪"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:370
+msgid "+ 用户"
+msgstr "+ 用户"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:371
+msgid "+ 社区"
+msgstr "+ 社区"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:372
+msgid "+ 类别"
+msgstr "+ 类别"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:373
+msgid "+ 词典词"
+msgstr "+ 词典词"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:374
+msgid "+ 课程"
+msgstr "+ 课程"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:375
+msgid "信息面板"
+msgstr "信息面板"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:376
+msgid "添加内容"
+msgstr "添加内容"
+
+#: features/ma_chinese/ma_chinese.features.menu_links.inc:377
+msgid "用户帐户"
+msgstr "用户帐户"
 
 #: features/ma_chinese/ma_chinese.info:0
 msgid "ma_chinese"
@@ -1456,7 +1514,6 @@ msgid "No recent Digital Heritage items were found in this community."
 msgstr "在该社区中没有发现最近的数字遗产项目。"
 
 #: features/ma_community_manage/ma_community_manage.views_default.inc:748
-#, fuzzy
 msgid "<div class=\"add-members-link btn btn-default\"><a href=\"<?php print url(\"digital-heritage/community\"); ?>/!1\">Browse All Digital Heritage in %1</a></div>"
 msgstr "<div class=\"add-members-link btn btn-default\">&lt;a href=\"&lt;?php print url(\"digital-heritage/community\"); ?&gt;/!1\"&gt; 浏览 %1 中的所有数字遗产</a></div>"
 
@@ -1733,6 +1790,10 @@ msgstr "穆库尔图文化议定书"
 msgid "Cultural Protocol content type, fields, permissions"
 msgstr "文化协议内容类型、字段、权限"
 
+#: features/ma_dashboard/ma_dashboard.features.inc:174
+msgid "Mukurtu Dashboard"
+msgstr "穆库图仪表板"
+
 #: features/ma_dashboard/ma_dashboard.views_default.inc:119
 msgid "Recent Content"
 msgstr "最新内容"
@@ -1766,7 +1827,6 @@ msgid "Digital Heritage Admin (Community Managers and Protocol Stewards) Notific
 msgstr "数字遗产管理员（社区管理员和协议管理员）通知"
 
 #: features/ma_dhan/ma_dhan.views_default.inc:271
-#, fuzzy
 msgid "<none>"
 msgstr "<none>"
 
@@ -3989,6 +4049,10 @@ msgstr "DH 原年份"
 msgid "Custom sorts for the browse pages"
 msgstr "浏览页面的自定义排序"
 
+#: features/ma_search_api/ma_search_api.module:534
+msgid "Sort"
+msgstr "排序"
+
 #: features/ma_search_api/ma_search_api.module:550
 msgid "Search Relevance"
 msgstr "搜索相关性"
@@ -4076,7 +4140,6 @@ msgid "Edit Taxonomy Term"
 msgstr "编辑分类术语"
 
 #: features/ma_views_pages/ma_views_pages.views_default.inc:145
-#, fuzzy
 msgid "<a href=\"/digital-heritage/category/[php]\"><img src=\"/sites/all/modules/custom/features/ma_digitalheritage/images/no_media_available.jpg\"/></a>"
 msgstr "<a href=\"/digital-heritage/category/[php]\"><img src=\"/sites/all/modules/custom/features/ma_digitalheritage/images/no_media_available.jpg\"/></a>"
 
@@ -5008,9 +5071,149 @@ msgid "Add Mukurtu related items field formatter that provides a paged display o
 msgstr "添加 Mukurtu 相关项目字段格式，分页显示相关实体。"
 
 #: mukurtu_splash/wizard.tpl.php:5
-#, fuzzy
 msgid "Hide Guide"
 msgstr "隐藏指南"
+
+#: mukurtu_splash/wizard.tpl.php:12
+msgid "1. Dashboard and Administration"
+msgstr "1.仪表板和管理"
+
+#: mukurtu_splash/wizard.tpl.php:13
+msgid "2. Set up Site"
+msgstr "2.建立网站"
+
+#: mukurtu_splash/wizard.tpl.php:14
+msgid "3. Communities"
+msgstr "3.社区"
+
+#: mukurtu_splash/wizard.tpl.php:15
+msgid "4. Cultural Protocols"
+msgstr "4.文化议定书"
+
+#: mukurtu_splash/wizard.tpl.php:16
+msgid "5. Categories"
+msgstr "5.类别"
+
+#: mukurtu_splash/wizard.tpl.php:17
+msgid "6. Users"
+msgstr "6.用户"
+
+#: mukurtu_splash/wizard.tpl.php:18
+msgid "7. Digital Heritage"
+msgstr "7.数字遗产"
+
+#: mukurtu_splash/wizard.tpl.php:23
+msgid "The dashboard provides quick access to all of Mukurtu’s core tools and features. Tools are grouped into boxes by their functions, so that related tools are available together, eg: Set up Site, Site Users, Communities and Protocols, Content and Collections."
+msgstr "仪表板可快速访问 Mukurtu 的所有核心工具和功能。工具按功能分组，以便相关工具一起使用，例如设置网站、网站用户、社区和协议、内容和收藏。"
+
+#: mukurtu_splash/wizard.tpl.php:24
+msgid "The dashboard is accessible to users with specific site-wide roles: mukurtu administrator, community administrator, and curator. Most users will not have access to the dashboard."
+msgstr "具有特定全站角色的用户可访问该仪表板：mukurtu 管理员、社区管理员和馆长。大多数用户都无法访问仪表板。"
+
+#: mukurtu_splash/wizard.tpl.php:25
+msgid "For more information, read the support articles: Introduction to the <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2558822-introduction-to-the-mukurtu-administrator-dashboard\">Mukurtu Administrator Dashboard</a> and <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2775579-managing-administrator-roles\">Managing Administrator Roles</a>."
+msgstr "更多信息，请阅读支持文章：<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2558822-introduction-to-the-mukurtu-administrator-dashboard\">Mukurtu 管理员控制面板</a>介绍和<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2775579-managing-administrator-roles\">管理员角色管理</a>。"
+
+#: mukurtu_splash/wizard.tpl.php:31
+msgid "On the dashboard, there is a box labelled 'Set up Site'. It contains quick links to easily change the look and feel of your site. No experience with coding is required to make these changes."
+msgstr "在仪表板上，有一个标有 \"设置网站 \"的方框。其中包含可轻松更改网站外观和感觉的快速链接。进行这些更改无需编码经验。"
+
+#: mukurtu_splash/wizard.tpl.php:32
+msgid "Look and feel changes include site name, site administrator email, logo, about page, navigation menu items, front page image and welcome text, footer elements, and theme settings."
+msgstr "外观更改包括网站名称、网站管理员电子邮件、徽标、关于页面、导航菜单项、首页图片和欢迎文字、页脚元素以及主题设置。"
+
+#: mukurtu_splash/wizard.tpl.php:33
+msgid "All personalizations accessed through this panel are fully supported within Mukurtu and will be preserved when a site is updated to new versions."
+msgstr "Mukurtu 完全支持通过该面板访问的所有个性化设置，并将在网站更新到新版本时予以保留。"
+
+#: mukurtu_splash/wizard.tpl.php:34
+msgid "For more information, read the support articles on <a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077159-site-look-and-feel/articles\">Site Look and Feel</a>."
+msgstr "如需了解更多信息，请阅读有关<a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077159-site-look-and-feel/articles\">网站外观</a>的支持文章。"
+
+#: mukurtu_splash/wizard.tpl.php:39
+msgid "Communities are one of the three core elements of every Mukurtu site and are used to group the contributors and users of the site."
+msgstr "社区是每个 Mukurtu 站点的三大核心要素之一，用于对站点的贡献者和用户进行分组。"
+
+#: mukurtu_splash/wizard.tpl.php:40
+msgid "Communities can be large or small, and each Mukurtu site can have as many communities as needed. Mukurtu administrators and community administrators are responsible for creating new communities."
+msgstr "社区可大可小，每个 Mukurtu 站点可根据需要拥有任意数量的社区。Mukurtu 管理员和社区管理员负责创建新社区。"
+
+#: mukurtu_splash/wizard.tpl.php:41
+msgid "User access to individual digital heritage items within a community is managed through the cultural protocols that are created within the community."
+msgstr "用户对社区内各个数字遗产项目的访问是通过社区内创建的文化协议进行管理的。"
+
+#: mukurtu_splash/wizard.tpl.php:42
+msgid "Some examples of communities could be specific families or clans, tribal government departments, space for youth-appropriate content, and contributing institutions or departments."
+msgstr "社区的一些例子可以是特定的家庭或部族、部落政府部门、适合青少年的内容空间以及贡献机构或部门。"
+
+#: mukurtu_splash/wizard.tpl.php:43
+msgid "For more information about creating and managing communities read the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432702-how-to-create-communities\">How to Create Communities</a>."
+msgstr "有关创建和管理社区的更多信息，请阅读支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432702-how-to-create-communities\">如何创建社区</a>》。"
+
+#: mukurtu_splash/wizard.tpl.php:48
+msgid "Cultural protocols are one of the three core elements of every Mukurtu site and provide individual users with appropriate access to specific content."
+msgstr "文化协议是每个 Mukurtu 网站的三大核心要素之一，它为个人用户提供了访问特定内容的适当途径。"
+
+#: mukurtu_splash/wizard.tpl.php:49
+msgid "Each cultural protocol exists within a community, and each community can have multiple cultural protocols. Community managers are responsible for creating new cultural protocols."
+msgstr "每个文化协议都存在于一个社区内，每个社区可以有多个文化协议。社区管理者负责创建新的文化协议。"
+
+#: mukurtu_splash/wizard.tpl.php:50
+msgid "There are two types of cultural protocols: open and strict. Digital heritage items within an open protocol can be viewed by anyone (including anonymous site visitors), while items within a strict protocol can only be viewed by members of that protocol. Multiple protocols can be layered to ensure more granular access. For example, if an item is part of the two strict protocols ‘Women Only’ and ‘Elders Only,’ then only users who are members of both the ‘Women Only’ and ‘Elders Only’ protocols can view that item."
+msgstr "文化协议分为两种：开放协议和严格协议。任何人（包括匿名网站访问者）都可以查看开放协议中的数字遗产项目，而严格协议中的项目只能由该协议的成员查看。多个协议可以分层，以确保更精细的访问。例如，如果一个项目属于 \"仅限女性 \"和 \"仅限长者 \"两个严格协议的一部分，那么只有同时是 \"仅限女性 \"和 \"仅限长者 \"协议成员的用户才能查看该项目。"
+
+#: mukurtu_splash/wizard.tpl.php:51
+msgid "Some examples of cultural protocols could be gender-based (male only, female only), age-based (elders only, no youth), seasonal access only, clan or tribal affiliation, secret/sacred, community only, or public access/open."
+msgstr "文化协议的一些例子可以是基于性别的（仅限男性、仅限女性）、基于年龄的（仅限长者、无青少年）、仅限季节性访问、氏族或部落隶属关系、秘密/神圣、仅限社区或公共访问/开放。"
+
+#: mukurtu_splash/wizard.tpl.php:52
+#, fuzzy
+msgid "For more information about creating and managing cultural protocols read the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432755-how-to-create-cultural-protocols?b_id=633\">How to Create Cultural Protocols</a>."
+msgstr "有关创建和管理文化协议的更多信息，请阅读支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432755-how-to-create-cultural-protocols?b_id=633\">如何创建文化协议》</a>。"
+
+#: mukurtu_splash/wizard.tpl.php:57
+msgid "Categories are one of the three core elements of every Mukurtu site and help users browse for and discover digital heritage items."
+msgstr "分类是每个 Mukurtu 网站的三大核心要素之一，有助于用户浏览和发现数字遗产项目。"
+
+#: mukurtu_splash/wizard.tpl.php:58
+msgid "Categories are high-level descriptive terms unique to each site that reflect the scope of the items included on the site. One set of categories is used to describe all digital heritage items within the site, and each digital heritage item must belong to at least one category. Mukurtu administrators are responsible for creating new categories."
+msgstr "类别是每个网站独有的高级描述性术语，反映了网站所包含项目的范围。一套类别用于描述网站内的所有数字遗产项目，每个数字遗产项目必须至少属于一个类别。Mukurtu 管理员负责创建新的类别。"
+
+#: mukurtu_splash/wizard.tpl.php:59
+msgid "Most Mukurtu sites usually have around 10-15 categories, but the categories chosen should reflect the content and user needs. For narrower or more specialized terms, consider using keywords. More information about keywords is available in the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2430094-using-categories-and-keywords\">Using Categories and Keywords</a>."
+msgstr "大多数 Mukurtu 网站通常有大约 10-15 个类别，但选择的类别应反映内容和用户需求。对于更窄或更专业的术语，可考虑使用关键字。有关关键字的更多信息，请参阅支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2430094-using-categories-and-keywords\">使用类别和关键字</a>》。"
+
+#: mukurtu_splash/wizard.tpl.php:60
+msgid "For more information about creating and managing categories, read the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432734-how-to-create-categories?b_id=633\">How to Create Categories</a>."
+msgstr "有关创建和管理类别的更多信息，请阅读支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432734-how-to-create-categories?b_id=633\">如何创建类别</a>》。"
+
+#: mukurtu_splash/wizard.tpl.php:65
+msgid "There are several user roles available within Mukurtu to help manage user account rights and responsibilities. All users will first need to have a user account created, and then that user account can be assigned roles within cultural protocols and communities as needed. Some users may have additional site-wide administrative roles."
+msgstr "Mukurtu 有多种用户角色可供选择，以帮助管理用户账户的权利和责任。所有用户首先需要创建一个用户账户，然后可根据需要为该用户账户分配文化协议和社区中的角色。有些用户可能还拥有其他全站管理角色。"
+
+#: mukurtu_splash/wizard.tpl.php:66
+msgid "Mukurtu administrators are responsible for creating/approving new user accounts. Protocol stewards are responsible for managing users within their protocols."
+msgstr "Mukurtu 管理员负责创建/批准新用户账户。协议管理员负责管理其协议内的用户。"
+
+#: mukurtu_splash/wizard.tpl.php:67
+msgid "For more information, read the support articles on <a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077160-managing-site-users/articles\">Managing Site Users</a>."
+msgstr "更多信息，请阅读 \"<a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077160-managing-site-users/articles\">管理网站用户</a>\"支持文章。"
+
+#: mukurtu_splash/wizard.tpl.php:72
+msgid "Digital heritage items are the core content within a Mukurtu site and are usually presented as a media asset (such as an image, video, audio file, or document) with accompanying descriptive metadata used to tell a larger story or narrative. Digital heritage items provide many layers of information through extended features."
+msgstr "数字遗产项目是 Mukurtu 网站的核心内容，通常以媒体资产（如图像、视频、音频文件或文 档）的形式呈现，并附有描述性元数据，用于讲述一个更大的故事或叙事。数字遗产项目通过扩展功能提供多层次的信息。"
+
+#: mukurtu_splash/wizard.tpl.php:73
+msgid "Protocol stewards and contributors are responsible for creating new digital heritage items."
+msgstr "协议管理员和贡献者负责创建新的数字遗产项目。"
+
+#: mukurtu_splash/wizard.tpl.php:74
+msgid "All digital heritage items must have a title, a community, a cultural protocol, and a category."
+msgstr "所有数字遗产项目都必须有一个标题、一个社区、一个文化协议和一个类别。"
+
+#: mukurtu_splash/wizard.tpl.php:75
+msgid "For more information about creating digital heritage items, read the support articles: <a href=\"http://support.mukurtu.org/customer/portal/articles/2558808-how-to-create-digital-heritage-items\">How to Create Digital Heritage Items</a>, and <a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077148-enriching-digital-heritage/articles\">Enriching Digital Heritage</a>."
+msgstr "有关创建数字遗产项目的更多信息，请阅读辅助文章：<a href=\"http://support.mukurtu.org/customer/portal/articles/2558808-how-to-create-digital-heritage-items\">如何创建数字遗产项目</a>和<a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077148-enriching-digital-heritage/articles\">丰富数字遗产</a>。"
 
 #: mukurtu_splash/mukurtu_splash.module:27;666
 msgid "Manage Collaboration Tools"
@@ -5689,7 +5892,6 @@ msgid "Step @step"
 msgstr "步骤 @步骤"
 
 #: mukurtu_splash/mukurtu_splash.module:1448;1451
-#, fuzzy
 msgid "You are already registered to another group"
 msgid_plural "You are already registered to @count groups"
 msgstr[0] "您已注册到另一个组"
@@ -5849,6 +6051,62 @@ msgstr "穆库尔图公用事业"
 #: mukurtu_utilities/mukurtu_utilities.info:0
 msgid "Mukurtu Tools and Utilities"
 msgstr "穆库图工具和实用程序"
+
+#: scald_bilibili/scald_bilibili.module:25
+msgid "Video hosted on Bilibili"
+msgstr "Bilibili 寄存的视频"
+
+#: scald_bilibili/scald_bilibili.module:34
+msgid "Bilibili video identifier or URL"
+msgstr "Bilibili 视频标识符或 URL"
+
+#: scald_bilibili/scald_bilibili.module:274
+msgid "Invalid Bilibili video identifier."
+msgstr "Bilibili 视频标识符无效。"
+
+#: scald_bilibili/scald_bilibili.module:277
+msgid "Bilibili video already imported."
+msgstr "已导入 Bilibili 视频。"
+
+#: scald_bilibili/scald_bilibili.info:0
+msgid "Scald Bilibili"
+msgstr "烫伤比里比利"
+
+#: scald_bilibili/scald_bilibili.info:0
+msgid "Provides Video atoms from Bilibili."
+msgstr "提供来自 Bilibili 的视频原子。"
+
+#: scald_bilibili/scald_bilibili.info:0 scald_spotify/scald_spotify.info:0
+msgid "Scald Providers"
+msgstr "烫伤提供商"
+
+#: scald_bilibili/scald_bilibili_features/scald_bilibili_features.info:0
+msgid "scald_bilibili_features"
+msgstr "烫伤_比利比利_特点"
+
+#: scald_spotify/scald_spotify.module:25
+msgid "Audio hosted on Spotify"
+msgstr "在 Spotify 上托管的音频"
+
+#: scald_spotify/scald_spotify.module:34
+msgid "Spotify audio identifier or URL"
+msgstr "Spotify 音频标识符或 URL"
+
+#: scald_spotify/scald_spotify.module:138
+msgid "Invalid Spotify audio identifier."
+msgstr "Spotify 音频标识符无效。"
+
+#: scald_spotify/scald_spotify.module:141
+msgid "Spotify audio already imported."
+msgstr "已导入 Spotify 音频。"
+
+#: scald_spotify/scald_spotify.info:0
+msgid "Scald Spotify"
+msgstr "烫伤 Spotify"
+
+#: scald_spotify/scald_spotify.info:0
+msgid "Provides Audio atoms from Spotify."
+msgstr "提供来自 Spotify 的音频原子。"
 
 #: views_autocomplete/views_autocomplete.views.inc:18
 msgid "Autocomplete JSON data document"
