@@ -208,8 +208,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2025-09-17 19:34+0100\n"
-"PO-Revision-Date: 2025-09-17 19:35+0100\n"
+"POT-Creation-Date: 2025-09-18 14:08+0100\n"
+"PO-Revision-Date: 2025-09-18 14:09+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Chinese, Simplified <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -5110,110 +5110,82 @@ msgstr "仪表板可快速访问 Mukurtu 的所有核心工具和功能。工具
 msgid "The dashboard is accessible to users with specific site-wide roles: mukurtu administrator, community administrator, and curator. Most users will not have access to the dashboard."
 msgstr "具有特定全站角色的用户可访问该仪表板：mukurtu 管理员、社区管理员和馆长。大多数用户都无法访问仪表板。"
 
-#: mukurtu_splash/wizard.tpl.php:25
-msgid "For more information, read the support articles: Introduction to the <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2558822-introduction-to-the-mukurtu-administrator-dashboard\">Mukurtu Administrator Dashboard</a> and <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2775579-managing-administrator-roles\">Managing Administrator Roles</a>."
-msgstr "更多信息，请阅读支持文章：<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2558822-introduction-to-the-mukurtu-administrator-dashboard\">Mukurtu 管理员控制面板</a>介绍和<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2775579-managing-administrator-roles\">管理员角色管理</a>。"
-
-#: mukurtu_splash/wizard.tpl.php:31
+#: mukurtu_splash/wizard.tpl.php:30
 msgid "On the dashboard, there is a box labelled 'Set up Site'. It contains quick links to easily change the look and feel of your site. No experience with coding is required to make these changes."
 msgstr "在仪表板上，有一个标有 \"设置网站 \"的方框。其中包含可轻松更改网站外观和感觉的快速链接。进行这些更改无需编码经验。"
 
-#: mukurtu_splash/wizard.tpl.php:32
+#: mukurtu_splash/wizard.tpl.php:31
 msgid "Look and feel changes include site name, site administrator email, logo, about page, navigation menu items, front page image and welcome text, footer elements, and theme settings."
 msgstr "外观更改包括网站名称、网站管理员电子邮件、徽标、关于页面、导航菜单项、首页图片和欢迎文字、页脚元素以及主题设置。"
 
-#: mukurtu_splash/wizard.tpl.php:33
+#: mukurtu_splash/wizard.tpl.php:32
 msgid "All personalizations accessed through this panel are fully supported within Mukurtu and will be preserved when a site is updated to new versions."
 msgstr "Mukurtu 完全支持通过该面板访问的所有个性化设置，并将在网站更新到新版本时予以保留。"
 
-#: mukurtu_splash/wizard.tpl.php:34
-msgid "For more information, read the support articles on <a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077159-site-look-and-feel/articles\">Site Look and Feel</a>."
-msgstr "如需了解更多信息，请阅读有关<a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077159-site-look-and-feel/articles\">网站外观</a>的支持文章。"
-
-#: mukurtu_splash/wizard.tpl.php:39
+#: mukurtu_splash/wizard.tpl.php:37
 msgid "Communities are one of the three core elements of every Mukurtu site and are used to group the contributors and users of the site."
 msgstr "社区是每个 Mukurtu 站点的三大核心要素之一，用于对站点的贡献者和用户进行分组。"
 
-#: mukurtu_splash/wizard.tpl.php:40
+#: mukurtu_splash/wizard.tpl.php:38
 msgid "Communities can be large or small, and each Mukurtu site can have as many communities as needed. Mukurtu administrators and community administrators are responsible for creating new communities."
 msgstr "社区可大可小，每个 Mukurtu 站点可根据需要拥有任意数量的社区。Mukurtu 管理员和社区管理员负责创建新社区。"
 
-#: mukurtu_splash/wizard.tpl.php:41
+#: mukurtu_splash/wizard.tpl.php:39
 msgid "User access to individual digital heritage items within a community is managed through the cultural protocols that are created within the community."
 msgstr "用户对社区内各个数字遗产项目的访问是通过社区内创建的文化协议进行管理的。"
 
-#: mukurtu_splash/wizard.tpl.php:42
+#: mukurtu_splash/wizard.tpl.php:40
 msgid "Some examples of communities could be specific families or clans, tribal government departments, space for youth-appropriate content, and contributing institutions or departments."
 msgstr "社区的一些例子可以是特定的家庭或部族、部落政府部门、适合青少年的内容空间以及贡献机构或部门。"
 
-#: mukurtu_splash/wizard.tpl.php:43
-msgid "For more information about creating and managing communities read the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432702-how-to-create-communities\">How to Create Communities</a>."
-msgstr "有关创建和管理社区的更多信息，请阅读支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432702-how-to-create-communities\">如何创建社区</a>》。"
-
-#: mukurtu_splash/wizard.tpl.php:48
+#: mukurtu_splash/wizard.tpl.php:45
 msgid "Cultural protocols are one of the three core elements of every Mukurtu site and provide individual users with appropriate access to specific content."
 msgstr "文化协议是每个 Mukurtu 网站的三大核心要素之一，它为个人用户提供了访问特定内容的适当途径。"
 
-#: mukurtu_splash/wizard.tpl.php:49
+#: mukurtu_splash/wizard.tpl.php:46
 msgid "Each cultural protocol exists within a community, and each community can have multiple cultural protocols. Community managers are responsible for creating new cultural protocols."
 msgstr "每个文化协议都存在于一个社区内，每个社区可以有多个文化协议。社区管理者负责创建新的文化协议。"
 
-#: mukurtu_splash/wizard.tpl.php:50
+#: mukurtu_splash/wizard.tpl.php:47
 msgid "There are two types of cultural protocols: open and strict. Digital heritage items within an open protocol can be viewed by anyone (including anonymous site visitors), while items within a strict protocol can only be viewed by members of that protocol. Multiple protocols can be layered to ensure more granular access. For example, if an item is part of the two strict protocols ‘Women Only’ and ‘Elders Only,’ then only users who are members of both the ‘Women Only’ and ‘Elders Only’ protocols can view that item."
 msgstr "文化协议分为两种：开放协议和严格协议。任何人（包括匿名网站访问者）都可以查看开放协议中的数字遗产项目，而严格协议中的项目只能由该协议的成员查看。多个协议可以分层，以确保更精细的访问。例如，如果一个项目属于 \"仅限女性 \"和 \"仅限长者 \"两个严格协议的一部分，那么只有同时是 \"仅限女性 \"和 \"仅限长者 \"协议成员的用户才能查看该项目。"
 
-#: mukurtu_splash/wizard.tpl.php:51
+#: mukurtu_splash/wizard.tpl.php:48
 msgid "Some examples of cultural protocols could be gender-based (male only, female only), age-based (elders only, no youth), seasonal access only, clan or tribal affiliation, secret/sacred, community only, or public access/open."
 msgstr "文化协议的一些例子可以是基于性别的（仅限男性、仅限女性）、基于年龄的（仅限长者、无青少年）、仅限季节性访问、氏族或部落隶属关系、秘密/神圣、仅限社区或公共访问/开放。"
 
-#: mukurtu_splash/wizard.tpl.php:52
-#, fuzzy
-msgid "For more information about creating and managing cultural protocols read the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432755-how-to-create-cultural-protocols?b_id=633\">How to Create Cultural Protocols</a>."
-msgstr "有关创建和管理文化协议的更多信息，请阅读支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432755-how-to-create-cultural-protocols?b_id=633\">如何创建文化协议》</a>。"
-
-#: mukurtu_splash/wizard.tpl.php:57
+#: mukurtu_splash/wizard.tpl.php:53
 msgid "Categories are one of the three core elements of every Mukurtu site and help users browse for and discover digital heritage items."
 msgstr "分类是每个 Mukurtu 网站的三大核心要素之一，有助于用户浏览和发现数字遗产项目。"
 
-#: mukurtu_splash/wizard.tpl.php:58
+#: mukurtu_splash/wizard.tpl.php:54
 msgid "Categories are high-level descriptive terms unique to each site that reflect the scope of the items included on the site. One set of categories is used to describe all digital heritage items within the site, and each digital heritage item must belong to at least one category. Mukurtu administrators are responsible for creating new categories."
 msgstr "类别是每个网站独有的高级描述性术语，反映了网站所包含项目的范围。一套类别用于描述网站内的所有数字遗产项目，每个数字遗产项目必须至少属于一个类别。Mukurtu 管理员负责创建新的类别。"
 
-#: mukurtu_splash/wizard.tpl.php:59
-msgid "Most Mukurtu sites usually have around 10-15 categories, but the categories chosen should reflect the content and user needs. For narrower or more specialized terms, consider using keywords. More information about keywords is available in the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2430094-using-categories-and-keywords\">Using Categories and Keywords</a>."
-msgstr "大多数 Mukurtu 网站通常有大约 10-15 个类别，但选择的类别应反映内容和用户需求。对于更窄或更专业的术语，可考虑使用关键字。有关关键字的更多信息，请参阅支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2430094-using-categories-and-keywords\">使用类别和关键字</a>》。"
+#: mukurtu_splash/wizard.tpl.php:55
+#, fuzzy
+msgid "Most Mukurtu sites usually have around 10-15 categories, but the categories chosen should reflect the content and user needs. For narrower or more specialized terms, consider using keywords."
+msgstr "大多数 Mukurtu 网站通常有大约 10-15 个类别，但选择的类别应反映内容和用户需求。对于较窄或较专业的术语，可考虑使用关键词。"
 
 #: mukurtu_splash/wizard.tpl.php:60
-msgid "For more information about creating and managing categories, read the support article <a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432734-how-to-create-categories?b_id=633\">How to Create Categories</a>."
-msgstr "有关创建和管理类别的更多信息，请阅读支持文章《<a href=\"http://support.mukurtu.org/customer/en/portal/articles/2432734-how-to-create-categories?b_id=633\">如何创建类别</a>》。"
-
-#: mukurtu_splash/wizard.tpl.php:65
 msgid "There are several user roles available within Mukurtu to help manage user account rights and responsibilities. All users will first need to have a user account created, and then that user account can be assigned roles within cultural protocols and communities as needed. Some users may have additional site-wide administrative roles."
 msgstr "Mukurtu 有多种用户角色可供选择，以帮助管理用户账户的权利和责任。所有用户首先需要创建一个用户账户，然后可根据需要为该用户账户分配文化协议和社区中的角色。有些用户可能还拥有其他全站管理角色。"
 
-#: mukurtu_splash/wizard.tpl.php:66
+#: mukurtu_splash/wizard.tpl.php:61
 msgid "Mukurtu administrators are responsible for creating/approving new user accounts. Protocol stewards are responsible for managing users within their protocols."
 msgstr "Mukurtu 管理员负责创建/批准新用户账户。协议管理员负责管理其协议内的用户。"
 
-#: mukurtu_splash/wizard.tpl.php:67
-msgid "For more information, read the support articles on <a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077160-managing-site-users/articles\">Managing Site Users</a>."
-msgstr "更多信息，请阅读 \"<a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077160-managing-site-users/articles\">管理网站用户</a>\"支持文章。"
-
-#: mukurtu_splash/wizard.tpl.php:72
+#: mukurtu_splash/wizard.tpl.php:66
 msgid "Digital heritage items are the core content within a Mukurtu site and are usually presented as a media asset (such as an image, video, audio file, or document) with accompanying descriptive metadata used to tell a larger story or narrative. Digital heritage items provide many layers of information through extended features."
 msgstr "数字遗产项目是 Mukurtu 网站的核心内容，通常以媒体资产（如图像、视频、音频文件或文 档）的形式呈现，并附有描述性元数据，用于讲述一个更大的故事或叙事。数字遗产项目通过扩展功能提供多层次的信息。"
 
-#: mukurtu_splash/wizard.tpl.php:73
+#: mukurtu_splash/wizard.tpl.php:67
 msgid "Protocol stewards and contributors are responsible for creating new digital heritage items."
 msgstr "协议管理员和贡献者负责创建新的数字遗产项目。"
 
-#: mukurtu_splash/wizard.tpl.php:74
+#: mukurtu_splash/wizard.tpl.php:68
 msgid "All digital heritage items must have a title, a community, a cultural protocol, and a category."
 msgstr "所有数字遗产项目都必须有一个标题、一个社区、一个文化协议和一个类别。"
-
-#: mukurtu_splash/wizard.tpl.php:75
-msgid "For more information about creating digital heritage items, read the support articles: <a href=\"http://support.mukurtu.org/customer/portal/articles/2558808-how-to-create-digital-heritage-items\">How to Create Digital Heritage Items</a>, and <a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077148-enriching-digital-heritage/articles\">Enriching Digital Heritage</a>."
-msgstr "有关创建数字遗产项目的更多信息，请阅读辅助文章：<a href=\"http://support.mukurtu.org/customer/portal/articles/2558808-how-to-create-digital-heritage-items\">如何创建数字遗产项目</a>和<a href=\"http://support.mukurtu.org/customer/en/portal/topics/1077148-enriching-digital-heritage/articles\">丰富数字遗产</a>。"
 
 #: mukurtu_splash/mukurtu_splash.module:27;666
 msgid "Manage Collaboration Tools"
