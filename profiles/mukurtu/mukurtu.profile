@@ -199,17 +199,6 @@ function mukurtu_default_menu_links () {
   menu_link_save($item);
 
   $item = array(
-    'link_path' => 'browse',
-    'link_title' => 'Browse',
-    'menu_name' => 'menu-browse-menu',
-    'language' => 'en',
-    'weight' => -43,
-    'expanded' => 0,
-    'customized' => 1,
-  );
-  menu_link_save($item);
-
-  $item = array(
     'link_path' => 'dictionary',
     'link_title' => 'Browse Dictionary',
     'menu_name' => 'menu-browse-menu',

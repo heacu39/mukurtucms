@@ -4,6 +4,12 @@
  * Implements hook_install().
  */
 function ma_chinese_install() {
+    ma_chinese_import_po();
+    ma_chinese_create_default_pages();
+    ma_chinese_default_menu_links();
+}
+
+function ma_chinese_import_po() {
     $path = drupal_get_path('module', 'ma_chinese');
 
     $fcontrib = new stdClass;
@@ -25,4 +31,58 @@ function ma_chinese_install() {
     $fpanels = new stdClass;
     $fpanels->uri = $path . '/translations/panels.zh-hans.po';
     _locale_import_read_po('db-store', $fpanels, LOCALE_IMPORT_KEEP, 'zh-hans', 'panels');
+}
+
+function ma_chinese_create_default_pages () {
+  $node = new stdClass();
+  $node->type = 'page';
+  $node->uid = 1;
+  $node->language = LANGUAGE_NONE;
+  $node->title = '关于';
+  $node->body[LANGUAGE_NONE][0] = array (
+    'value' => file_get_contents(DRUPAL_ROOT . '/' . drupal_get_path('module', 'ma_chinese') . '/pages/about'),
+    'format' => 'full_html',
+  );
+  $node->menu = array(
+    'link_title' => '关于',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'en',
+    'weight' => -55,
+    'plid' => 0,
+    'enabled' => 1,
+  );
+  node_save($node);
+}
+
+function ma_chinese_default_menu_links() {
+  $item = array(
+    'link_path' => 'collections',
+    'link_title' => '浏览收藏集',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'zh-hans',
+    'weight' => -50,
+    'expanded' => 0,
+  );
+  menu_link_save($item);
+
+  $item = array(
+    'link_path' => 'digital-heritage',
+    'link_title' => '浏览数字遗产',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'zh-hans',
+    'weight' => -45,
+    'expanded' => 0,
+  );
+  menu_link_save($item);
+
+  $item = array(
+    'link_path' => 'dictionary',
+    'link_title' => '浏览词典',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'zh-hans',
+    'weight' => -40,
+    'expanded' => 0,
+    'customized' => 1,
+  );
+  menu_link_save($item);
 }
