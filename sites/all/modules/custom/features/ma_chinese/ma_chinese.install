@@ -5,35 +5,57 @@
  */
 function ma_chinese_install() {
     ma_chinese_import_po();
-    ma_chinese_create_default_pages();
-    ma_chinese_default_menu_links();
+    ma_chinese_create_default_pages_zh();
+    ma_chinese_create_default_pages_bo();
+    ma_chinese_default_menu_links_zh();
+    ma_chinese_default_menu_links_bo();
 }
 
 function ma_chinese_import_po() {
     $path = drupal_get_path('module', 'ma_chinese');
 
-    $fcontrib = new stdClass;
-    $fcontrib->uri = $path . '/translations/contrib.zh-hans.po';
-    _locale_import_read_po('db-store', $fcontrib, LOCALE_IMPORT_KEEP, 'zh-hans');
+    $zh_contrib = new stdClass;
+    $zh_contrib->uri = $path . '/translations/contrib.zh-hans.po';
+    _locale_import_read_po('db-store', $zh_contrib, LOCALE_IMPORT_KEEP, 'zh-hans');
 
-    $fcustom = new stdClass;
-    $fcustom->uri = $path . '/translations/custom.zh-hans.po';
-    _locale_import_read_po('db-store', $fcustom, LOCALE_IMPORT_KEEP, 'zh-hans');
+    $zh_custom = new stdClass;
+    $zh_custom->uri = $path . '/translations/custom.zh-hans.po';
+    _locale_import_read_po('db-store', $zh_custom, LOCALE_IMPORT_KEEP, 'zh-hans');
 
-    $ffields = new stdClass;
-    $ffields->uri = $path . '/translations/fields.zh-hans.po';
-    _locale_import_read_po('db-store', $ffields, LOCALE_IMPORT_KEEP, 'zh-hans', 'field');
+    $zh_fields = new stdClass;
+    $zh_fields->uri = $path . '/translations/fields.zh-hans.po';
+    _locale_import_read_po('db-store', $zh_fields, LOCALE_IMPORT_KEEP, 'zh-hans', 'field');
 
-    $fviews = new stdClass;
-    $fviews->uri = $path . '/translations/views.zh-hans.po';
-    _locale_import_read_po('db-store', $fviews, LOCALE_IMPORT_KEEP, 'zh-hans', 'views');
+    $zh_views = new stdClass;
+    $zh_views->uri = $path . '/translations/views.zh-hans.po';
+    _locale_import_read_po('db-store', $zh_views, LOCALE_IMPORT_KEEP, 'zh-hans', 'views');
 
-    $fpanels = new stdClass;
-    $fpanels->uri = $path . '/translations/panels.zh-hans.po';
-    _locale_import_read_po('db-store', $fpanels, LOCALE_IMPORT_KEEP, 'zh-hans', 'panels');
+    $zh_panels = new stdClass;
+    $zh_panels->uri = $path . '/translations/panels.zh-hans.po';
+    _locale_import_read_po('db-store', $zh_panels, LOCALE_IMPORT_KEEP, 'zh-hans', 'panels');
+
+    $bo_contrib = new stdClass;
+    $bo_contrib->uri = $path . '/translations/contrib.bo.po';
+    _locale_import_read_po('db-store', $bo_contrib, LOCALE_IMPORT_KEEP, 'bo');
+
+    $bo_custom = new stdClass;
+    $bo_custom->uri = $path . '/translations/custom.bo.po';
+    _locale_import_read_po('db-store', $bo_custom, LOCALE_IMPORT_KEEP, 'bo');
+
+    $bo_fields = new stdClass;
+    $bo_fields->uri = $path . '/translations/fields.bo.po';
+    _locale_import_read_po('db-store', $bo_fields, LOCALE_IMPORT_KEEP, 'bo', 'field');
+
+    $bo_views = new stdClass;
+    $bo_views->uri = $path . '/translations/views.bo.po';
+    _locale_import_read_po('db-store', $bo_views, LOCALE_IMPORT_KEEP, 'bo', 'views');
+
+    $bo_panels = new stdClass;
+    $bo_panels->uri = $path . '/translations/panels.bo.po';
+    _locale_import_read_po('db-store', $bo_panels, LOCALE_IMPORT_KEEP, 'bo', 'panels');
 }
 
-function ma_chinese_create_default_pages () {
+function ma_chinese_create_default_pages_zh() {
   $node = new stdClass();
   $node->type = 'page';
   $node->uid = 1;
@@ -46,7 +68,7 @@ function ma_chinese_create_default_pages () {
   $node->menu = array(
     'link_title' => '关于',
     'menu_name' => 'menu-browse-menu',
-    'language' => 'en',
+    'language' => 'zh-hans',
     'weight' => -55,
     'plid' => 0,
     'enabled' => 1,
@@ -54,7 +76,28 @@ function ma_chinese_create_default_pages () {
   node_save($node);
 }
 
-function ma_chinese_default_menu_links() {
+function ma_chinese_create_default_pages_bo() {
+  $node = new stdClass();
+  $node->type = 'page';
+  $node->uid = 1;
+  $node->language = LANGUAGE_NONE;
+  $node->title = '关于';
+  $node->body[LANGUAGE_NONE][0] = array (
+    'value' => file_get_contents(DRUPAL_ROOT . '/' . drupal_get_path('module', 'ma_chinese') . '/pages/about'),
+    'format' => 'full_html',
+  );
+  $node->menu = array(
+    'link_title' => '关于',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'bo',
+    'weight' => -55,
+    'plid' => 0,
+    'enabled' => 1,
+  );
+  node_save($node);
+}
+
+function ma_chinese_default_menu_links_zh() {
   $item = array(
     'link_path' => 'collections',
     'link_title' => '浏览收藏集',
@@ -80,6 +123,39 @@ function ma_chinese_default_menu_links() {
     'link_title' => '浏览词典',
     'menu_name' => 'menu-browse-menu',
     'language' => 'zh-hans',
+    'weight' => -40,
+    'expanded' => 0,
+    'customized' => 1,
+  );
+  menu_link_save($item);
+}
+
+function ma_chinese_default_menu_links_bo() {
+  $item = array(
+    'link_path' => 'collections',
+    'link_title' => '浏览收藏集',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'bo',
+    'weight' => -50,
+    'expanded' => 0,
+  );
+  menu_link_save($item);
+
+  $item = array(
+    'link_path' => 'digital-heritage',
+    'link_title' => '浏览数字遗产',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'bo',
+    'weight' => -45,
+    'expanded' => 0,
+  );
+  menu_link_save($item);
+
+  $item = array(
+    'link_path' => 'dictionary',
+    'link_title' => '浏览词典',
+    'menu_name' => 'menu-browse-menu',
+    'language' => 'bo',
     'weight' => -40,
     'expanded' => 0,
     'customized' => 1,
